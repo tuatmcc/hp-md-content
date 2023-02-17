@@ -8,12 +8,12 @@ img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f
 
 # 手順
 
-`public/activities`に活動報告の記事を、`public/blog`にその他のマークダウン記事(なんでも)を置いてください。
+`news`にお知らせの記事を、`blog`にその他のマークダウン記事(なんでも)を置いてください。
 記事のフォルダを作成し、その中にマークダウンを置いてください。ファイル名は`index.md`にしてください。
 
 記事の先頭に以下のように記述します。
 
-```markdown title="bocchi-the-rock/index.md"
+```markdown title="blog/bocchi-the-rock/index.md"
 ---
 title: "ぼっち・ざ・ろっくを鑑賞しました"
 description: "ぼっち・ざ・ろっくをみた"
