@@ -1,6 +1,8 @@
 # Markdown Articles
 
-ホームページに載せるためのマークダウン記事を置いておくリポジトリです。
+[ホームページ](https://www.tuatmcc.com)に載せるためのマークダウン記事を置いておくリポジトリです。
+
+ホームページのソースコードは<https://github.com/tuatmcc/mcc-website>
 
 - `news`: お知らせ
   - 各お知らせの詳細.md
