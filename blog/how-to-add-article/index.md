@@ -45,11 +45,16 @@ author: "Goto Hitori"
 
 なお、ブラウザ上から編集する際は、簡単に画像を置くことができます。
 
-```
-![logo](./bocchi.webp)
+```markdown
+![alt text](./bocchi.webp)
 ```
 
-![logo](./bocchi.webp)
+![alt text](./bocchi.webp)
+
+```markdown
+```
+
+
 
 # マークダウンの書き方
 
@@ -141,26 +146,18 @@ _Italic 斜体_
 
 ## 画像
 
-画像形式はなんでもいいですが、是非新しくて軽い`webp`に変換しましょう！
-
 ```markdown
 外部 URL
 ![画像](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
 
-内部 URL その１
-![logo](/mcc-logo.svg)
-
-内部 URL その２
+内部 URL (相対パス)
 ![bocchi](./bocchi.webp)
 ```
 
 外部 URL
 ![画像](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
 
-内部 URL その１
-![logo](/mcc-logo.svg)
-
-内部 URL その２
+内部 URL (相対パス)
 ![bocchi](./bocchi.webp)
 
 ## 脚注
