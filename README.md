@@ -5,9 +5,13 @@
 ホームページのソースコードは[こちら](https://github.com/tuatmcc/mcc-website)。
 
 - `news`: お知らせ
-  - 各お知らせの詳細.md
+  - `各お知らせの詳細`
+    - `index.md`
+    - 画像など
 - `blog`: ブログ
-  - お知らせ以外の記事.md
+  - `お知らせ以外の記事`
+    - `index.md`
+    - 画像など
 - `members`: 部員一覧 **`new`**
   - 各部員のプロフィール
 
