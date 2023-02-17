@@ -3,7 +3,7 @@ title: "記事の書き方"
 description: "Markdown記事をホームページに追加する方法を説明します。"
 date: "2023-01-05"
 tags: ["web", "dev"]
-img: "/abstract-tech-image-4.webp"
+img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f-47be-a99c-ed9a1a615947.png"
 ---
 
 # 手順
