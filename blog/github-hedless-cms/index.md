@@ -140,4 +140,4 @@ https://www.haxibami.net/blog/posts/blog-renewal
 
 https://github.com/tuatmcc/mcc-website
 
-https://github.com/tuatmcc/markdown-article
+https://github.com/tuatmcc/markdown-articles
