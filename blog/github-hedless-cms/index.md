@@ -81,13 +81,13 @@ GitHubのリポジトリからデータ取得するAPIなんてあるのか？�
 
 まず、リポジトリを`content`ディレクトリにクローンする下記ファイルを作成します。
 
-```shell: src/prebulid.sh
+```shell title=src/prebulid.sh
 git clone --depth 1 https://github.com/organization-name/CMS用gitリポジトリ.git content
 ```
 
 次に、`package.json`を編集します。
 
-```diff: package.json
+```diff title=package.json
 ...
   "scripts": {
 +   "prebuild": "bash ./src/prebuild.sh",
