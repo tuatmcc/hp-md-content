@@ -1,5 +1,9 @@
 ---
-title: "GitHubでヘッドレスCMS"
+title: "GitHubだけでヘッドレスCMSを再現しよう！"
+date: "2023-02-19"
+description: "GitHubだけでヘッドレスCMS(?)を再現しようとした話。"
+tags: [dev, nextjs, jamstack]
+author: ojii3
 ---
 
 
