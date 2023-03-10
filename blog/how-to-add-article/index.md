@@ -22,6 +22,8 @@ MCCからのお知らせ記事(活動報告も含む)は、`news`フォルダに
 4. `main`ブランチに`commit`して保存します。
 5. [本体リポジトリのworkflow](https://github.com/tuatmcc/mcc-website/actions/workflows/nextjs.yml)を開き、`Run workflow`を押しブランチに`main`を選択、実行すると、ホームページが更新されます。
 
+![image](https://user-images.githubusercontent.com/84656786/224229412-41ef2731-cd01-48a1-8e37-10e5b9c02c28.png)
+
 ## 注意事項
 
 記事の先頭に以下のような記述が必要です。
@@ -41,7 +43,7 @@ author: "Goto Hitori"
 
 また、画像のURLは、同じフォルダに画像をアップロードし、`./画像のファイル名`とするか、`httpsから始まる外部URL`でお願いします。
 
-なお、ブラウザ上から編集する際は、簡単に画像を置くことができます。
+なお、ブラウザ上から編集する際は、ドラッグ&ドロップで簡単に画像を置くことができます。
 
 ```markdown
 ![alt text](./bocchi.webp)
