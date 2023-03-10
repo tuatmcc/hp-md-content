@@ -22,7 +22,7 @@
 
 1. `Add File`ボタンを押し、記事を作成します。
 2. `main`ブランチにコミットし、保存します。
-3. <https://github.com/tuatmcc/mcc-website/actions>にアクセスし、`Deploy Next.js site to Pages`を`Run workflow`から実行します。
+3. <https://github.com/tuatmcc/mcc-website/actions/workflows/nextjs.yml>にアクセスし、Run workflow`から`main`ブランチを選び実行します。
 4. ホームページが更新されます。
 
 ## System
