@@ -20,7 +20,7 @@ MCCからのお知らせ記事(活動報告も含む)は、`news`フォルダに
 2. ページ右上の`Creat new file`を押すと、ブラウザ上で簡易エディタが開くので、ファイル名を`homepage-renewal/index.md`などとして下さい。 **スラッシュ/以降は必ず`index.md`です**
 3. マークダウンで記事を書きます。その際の書き方は後ほど述べます。
 4. `main`ブランチに`commit`して保存します。
-5. (未実装機能です) `Actions`タブを開き、`workflow`から`Deploy`を選択。`Run workflow`を押し、手動でGitHub Actionsを実行すると、ホームページが更新されます。
+5. [本体リポジトリのworkflow](https://github.com/tuatmcc/mcc-website/actions/workflows/nextjs.yml)を開き、`Run workflow`を押しブランチに`main`を選択、実行すると、ホームページが更新されます。
 
 ## 注意事項
 
@@ -50,8 +50,10 @@ author: "Goto Hitori"
 ![alt text](./bocchi.webp)
 
 ```markdown
+![logo](https://user-images.githubusercontent.com/84656786/224228583-2f400e96-e64a-4322-9c87-9c0066c43f8f.svg)
 ```
 
+![logo](https://user-images.githubusercontent.com/84656786/224228583-2f400e96-e64a-4322-9c87-9c0066c43f8f.svg)
 
 
 # マークダウンの書き方
