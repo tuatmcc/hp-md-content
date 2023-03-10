@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Arch Linuxで学内LAN(tuatnet)に接続する"
 date: "2023-01-07"
 tags: [btw]
