@@ -8,7 +8,7 @@ img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f
 
 # 手順
 
-<https://github.com/tuatmcc/markdown-articles> を更新することがメイン工程となります。
+<https://github.com/tuatmcc/hp-md-content> を更新することがメイン工程となります。
 
 ここから先は、ブラウザからの操作を想定して説明します。クローンしたローカル環境や、スマホアプリ上でも手順は大きくは変わりません。(スマホアプリ上からは一部機能が使えませんので、最終的にはブラウザが必要です)
 
@@ -16,7 +16,7 @@ MCCからのお知らせ記事(活動報告も含む)は、`news`フォルダに
 
 例えば、「ホームページリニューアル」というお知らせ記事を作成する手順は以下のようになります。
 
-1. <https://github.com/tuatmcc/markdown-articles> にアクセスし、`news`フォルダに進みます。
+1. <https://github.com/tuatmcc/hp-md-content> にアクセスし、`news`フォルダに進みます。
 2. ページ右上の`Creat new file`を押すと、ブラウザ上で簡易エディタが開くので、ファイル名を`homepage-renewal/index.md`などとして下さい。 **スラッシュ/以降は必ず`index.md`です**
 3. マークダウンで記事を書きます。その際の書き方は後ほど述べます。
 4. `main`ブランチに`commit`して保存します。
