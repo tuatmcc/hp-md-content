@@ -86,6 +86,7 @@ GitHubのリポジトリからデータ取得するAPIなんてあるのか？�
 まず、リポジトリを`content`ディレクトリにクローンする下記ファイルを作成します。
 
 ```shell title="src/prebulid.sh"
+rm -rf content
 git clone --depth 1 https://github.com/organization-name/CMS用gitリポジトリ.git content
 ```
 
@@ -142,6 +143,6 @@ https://www.haxibami.net/blog/posts/blog-renewal
 
 最後に、ソースコードを貼っておきます。
 
-https://github.com/tuatmcc/mcc-website
+https://github.com/tuatmcc/homepage2.0
 
 https://github.com/tuatmcc/hp-md-content
