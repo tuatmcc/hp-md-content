@@ -2,7 +2,7 @@
 
 [ホームページ](https://www.tuatmcc.com)に載せるためのマークダウン記事を置いておくリポジトリです。
 
-ホームページのソースコードは[こちら](https://github.com/tuatmcc/mcc-website)。
+ホームページのソースコードは[こちら](https://github.com/tuatmcc/homepage2.0)。
 
 - `news`: お知らせ
   - `各お知らせの詳細`
