@@ -3,7 +3,7 @@ title: "GitHubだけでヘッドレスCMSを再現しよう！"
 date: "2023-02-19"
 description: "GitHubだけでヘッドレスCMS(?)を再現しようとした話。"
 tags: [dev, nextjs, jamstack]
-author: ojii3
+author: おかず
 img: "https://user-images.githubusercontent.com/84656786/224326027-5ec479f6-893e-4820-9114-f3c47c8ab773.png"
 
 ---
@@ -13,7 +13,7 @@ img: "https://user-images.githubusercontent.com/84656786/224326027-5ec479f6-893e
 
 # はじめに
 
-こんにちは。とある大学の1年生をやっております。
+こんにちは。農工大で1年生をやっております。
 
 2,3ヶ月前から、当サークルのホームページを一から作り直すプロジェクトを始めており、なんと、プロジェクトメンバーは僕1人(泣)
 
