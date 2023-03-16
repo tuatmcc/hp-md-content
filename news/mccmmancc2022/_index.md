@@ -1,7 +1,7 @@
 ---
 title: MCCMMANCC2022を行いました
 description: MCCMMANCC2022を行いました
-date: "2022-12-"
+date: "2022-12-17"
 tags: [lt]
 ---
 
