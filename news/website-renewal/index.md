@@ -4,7 +4,7 @@ description: "MCCのホームページをシステム部分から丸ごと新し
 img: "./mcc-website-screenshot.webp"
 date: "2023-01-13"
 tags: ["dev", "web", "nextjs"]
-author: "おかず"
+author: "okazu"
 ---
 
 MCC のホームページをリニューアルしたのでご報告
