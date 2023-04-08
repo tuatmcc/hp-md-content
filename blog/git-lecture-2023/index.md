@@ -47,11 +47,26 @@ GitHubでは、sshという通信を使ってGitと通信します。sshキー�
 Gitクライアントには、SourceTreeやFork、GitHub Desktop、Git Kraken、VScodeやその他IDEのビルトインなどがあります。
 今回は、VScodeのビルトインを使ってGitを操作していきましょう。
 
-1. VScodeを起動します。
-2. "Open Folder"をクリックし、プロジェクトを開きます。
-3. "Source Control"アイコンをクリックし、ファイルをステージングします。
-4. ステージングしたファイルに、コミットメッセージをつけてコミットします。
-5. 変更をプッシュして、GitHubにアップロードします。、
+1. VSCodeを起動します。
+2. ファイルメニューから、「Open Folder」をクリックします。
+3. ファイルを保存するフォルダを選択します。
+4. ファイルメニューから、「New File」をクリックして、新しいファイルを作成します。
+5. ファイル名を「hello.c」と入力し、Enterを押します。
+以下のプログラムを入力します。
+
+```c :hello.c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+
+6. ファイルメニューから、「Save」をクリックして、ファイルを保存します。
+7. 左側のエクスプローラーパネルから、ファイルを右クリックし、「Add to Source Control」をクリックします。
+8. エクスプローラーパネルの下にある「Source Control」パネルで、変更内容を確認します。
+4. 「Commit」をクリックして、変更内容をコミットします。
 
 ## GitHubの使い方
 
