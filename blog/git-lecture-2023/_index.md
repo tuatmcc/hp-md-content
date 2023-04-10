@@ -4,7 +4,7 @@ date: 2023-04-09
 author: okazu
 ---
 
-ChatGPT作
+ChatGPT作・後で全部作り直す
 
 # Git・GitHub講習資料
 
