@@ -46,6 +46,8 @@ author: "Goto Hitori"
 
 なお、ブラウザ上から編集する際は、ドラッグ&ドロップで簡単に画像を置くことができます。
 
+(前者の相対パスの方法を推進)
+
 ```markdown
 ![alt text](./bocchi.webp)
 ```
