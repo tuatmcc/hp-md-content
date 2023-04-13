@@ -1,7 +1,7 @@
 ---
 title: 'nesting2'
 tags: [nest]
-date: 'date'
+date: '2002-12-22'
 ---
 
 # nesting2
