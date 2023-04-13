@@ -1,10 +1,10 @@
 ---
 title: "ホームページをリニューアルしました"
 description: "MCCのホームページをシステム部分から丸ごと新しくしました。"
-img: "./mcc-website-screenshot.webp"
+img: "./new-website-screenshot.webp"
 date: "2023-01-13"
 tags: ["dev", "web", "nextjs"]
-author: "okazu"
+author: "ojii3"
 ---
 
 MCC のホームページをリニューアルしたのでご報告
