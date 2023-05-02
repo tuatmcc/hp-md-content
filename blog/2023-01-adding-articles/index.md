@@ -3,7 +3,7 @@ title: "記事の書き方"
 description: "Markdown記事をホームページに追加する方法を説明します。"
 date: "2023-01-05"
 tags: ["web", "dev"]
-author: okazu
+author: ojii3
 img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f-47be-a99c-ed9a1a615947.png"
 ---
 
@@ -13,7 +13,7 @@ img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f
 
 ここから先は、ブラウザからの操作を想定して説明します。クローンしたローカル環境や、スマホアプリ上でも手順は大きくは変わりません。(スマホアプリ上からは一部機能が使えませんので、最終的にはブラウザが必要です)
 
-MCCからのお知らせ記事(活動報告も含む)は、`news`フォルダに、それ以外(技術記事・ポエムなど)は`blog`フォルダにおきます。
+MCC からのお知らせ記事(活動報告も含む)は、`news`フォルダに、それ以外(技術記事・ポエムなど)は`blog`フォルダにおきます。
 
 例えば、「ホームページリニューアル」というお知らせ記事を作成する手順は以下のようになります。
 
@@ -42,7 +42,7 @@ author: "Goto Hitori"
 
 `title`は必須です。`date`も記事並べ替えのために書いてください。
 
-また、画像のURLは、同じフォルダに画像をアップロードし、`./画像のファイル名`とするか、`httpsから始まる外部URL`でお願いします。
+また、画像の URL は、同じフォルダに画像をアップロードし、`./画像のファイル名`とするか、`httpsから始まる外部URL`でお願いします。
 
 なお、ブラウザ上から編集する際は、ドラッグ&ドロップで簡単に画像を置くことができます。
 
@@ -59,7 +59,6 @@ author: "Goto Hitori"
 ```
 
 ![logo](https://user-images.githubusercontent.com/84656786/224228583-2f400e96-e64a-4322-9c87-9c0066c43f8f.svg)
-
 
 # マークダウンの書き方
 
@@ -165,6 +164,24 @@ _Italic 斜体_
 内部 URL (相対パス)
 ![bocchi](./bocchi.webp)
 
+## 折りたたみ
+
+```markdown
+<details>
+<summary>折りたたみ</summary>
+
+折りたたみの中身です
+
+</details>
+```
+
+<details>
+<summary>折りたたみ</summary>
+
+折りたたみの中身です
+
+</details>
+
 ## 脚注
 
 ```markdown
@@ -172,6 +189,8 @@ _Italic 斜体_
 
 [^1]: 脚注です
 ```
+
+`````
 
 脚注[^1]
 
@@ -210,10 +229,10 @@ _Italic 斜体_
 ## インラインコード
 
 ```markdown
-`これはインラインコードです` `Font は JetBrains Monoを使用` ``コード内で"`"を使うには、"`"を一個追加してはさみます``
+`これはインラインコードです` `Font は JetBrains Monoを使用` `` コード内で"`"を使うには、"`"を一個追加してはさみます ``
 ```
 
-`これはインラインコードです` `Font は JetBrains Monoを使用` ``コード内で"`"を使うには、"`"を一個追加してはさみます``
+`これはインラインコードです` `Font は JetBrains Monoを使用` `` コード内で"`"を使うには、"`"を一個追加してはさみます ``
 
 ## コードブロック
 
@@ -223,7 +242,7 @@ _Italic 斜体_
 ```python title="blog.py"
 print('Hello World')
 ```
-````
+`````
 
 ```python title="blog.py"
 print('Hello World')
@@ -262,3 +281,7 @@ $$
 ```
 
 :smile: :+1: :tada: :rocket: :metal:
+
+```
+
+```
