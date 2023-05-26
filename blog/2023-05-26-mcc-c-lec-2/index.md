@@ -1,5 +1,5 @@
 ---
-title: "MCC C言語部内講習会 第2回
+title: "MCC C言語部内講習会 第2回"
 description: "MCC C言語部内講習会 第2回 を行いました。"
 date: "2023-05-26"
 tags: ["dev"]
