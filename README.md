@@ -23,12 +23,10 @@
 **ブランチを気にする必要はありません！ローカル環境・Webブラウザ・モバイルアプリなど、どこからでも編集できます。mainブランチに直コミットしましょう！**
 
 1. `Add File`ボタンを押し、記事を作成します。
-2. `main`ブランチにコミットし、保存します。
-3. <https://github.com/tuatmcc/homepage2.0/actions/workflows/nextjs.yml>にアクセスし、Run workflow`から`main`ブランチを選び実行します。
+2. `Commit Changes`からファイルを保存(`commit`+`push`)します。
+3. 毎日正午にホームページに自動で反映されます。(一応手動でも可能)
 
-![image](https://user-images.githubusercontent.com/84656786/224229195-a705dac7-78f9-4d5d-9f8d-f018eea7e490.png)
-
-4. ホームページが更新されます。
+ファイル名を`index.md`以外(`_index.md`)以外にすることで下書き状態で保存できます
 
 ## System
 
