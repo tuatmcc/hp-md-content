@@ -9,15 +9,13 @@ img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f
 
 # 手順
 
-<https://github.com/tuatmcc/hp-md-content> を更新することがメイン工程となります。
-
-ここから先は、ブラウザからの操作を想定して説明します。クローンしたローカル環境や、スマホアプリ上でも手順は大きくは変わりません。(スマホアプリ上からは一部機能が使えませんので、最終的にはブラウザが必要です)
+[記事管理用リポジトリ](https://github.com/tuatmcc/hp-md-content) を更新することがメイン工程となります。
 
 MCC からのお知らせ記事(活動報告も含む)は、`news`フォルダに、それ以外(技術記事・ポエムなど)は`blog`フォルダにおきます。
 
 例えば、「ホームページリニューアル」というお知らせ記事を作成する手順は以下のようになります。
 
-1. <https://github.com/tuatmcc/hp-md-content> にアクセスし、`news`フォルダに進みます。
+1. [記事管理用リポジトリ](https://github.com/tuatmcc/hp-md-content) にアクセスし、`news`フォルダに進みます。
 2. ページ右上の`Creat new file`を押すと、ブラウザ上で簡易エディタが開くので、ファイル名を`homepage-renewal/index.md`などとして下さい。 **スラッシュ/以降は必ず`index.md`です**
 3. マークダウンで記事を書きます。その際の書き方は後ほど述べます。
 4. `main`ブランチに`commit`して保存します。
@@ -27,7 +25,7 @@ MCC からのお知らせ記事(活動報告も含む)は、`news`フォルダ�
 
 ## 注意事項
 
-記事の先頭に以下のような記述が必要です。
+記事の先頭に以下のような記述が必要です。(Frontmatter)
 
 ```markdown title="blog/bocchi-the-rock/index.md"
 ---
@@ -40,7 +38,7 @@ author: "Goto Hitori"
 ---
 ```
 
-`title`は必須です。`date`も記事並べ替えのために書いてください。
+`title`, `date`は必須です。
 
 また、画像の URL は、同じフォルダに画像をアップロードし、`./画像のファイル名`とするか、`httpsから始まる外部URL`でお願いします。
 
@@ -272,7 +270,7 @@ $$
 L = \frac{1}{2} \rho v^2 S C_L
 $$
 
-## emoji
+## Emoji
 
 ```markdown
 :smile: :+1: :tada: :rocket: :metal:
@@ -280,6 +278,10 @@ $$
 
 :smile: :+1: :tada: :rocket: :metal:
 
+## 埋め込み
+
+```markdon
+<a class="twitter-timeline" href="https://twitter.com/TUATMCC?ref_src=twsrc%5Etfw">Tweets by TUATMCC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
 
-```
+<a class="twitter-timeline" href="https://twitter.com/TUATMCC?ref_src=twsrc%5Etfw">Tweets by TUATMCC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
