@@ -256,15 +256,19 @@ print('Hello World')
 + これは追加です
 ```
 
+特定の単語や行のハイライトなど、その他の機能は[こちら](https://rehype-pretty-code.netlify.app/)を参照してください。
+
 ## 数式
 
-KaTex を使用しています。
 
 ```math
+$\KaTeX$ を使用しています。
+
 $$
 L = \frac{1}{2} \rho v^2 S C_L
 $$
 ```
+$\KaTeX$ を使用しています。
 
 $$
 L = \frac{1}{2} \rho v^2 S C_L
