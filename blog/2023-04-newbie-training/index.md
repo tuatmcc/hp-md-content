@@ -10,7 +10,7 @@ date: 2023-04-15
 1. C言語でオセロゲーム作成
   - WSLなどの環境構築
   - 1年生が1年間で学ぶC言語の知識を学ぶ
-  - [資料](blog/2023-04-newbie-training/clang)
+  - [資料](/blog/2023-04-newbie-training/clang)
 
 2. Git/GitHub講習
   - Gitのインストール・設定
