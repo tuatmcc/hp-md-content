@@ -1,5 +1,5 @@
 ---
-title: ICPC2023 に出場しました。
+title: ICPC2023 に出場しました
 description: ICPC2023 に出場しました。
 date: "2023-07-07"
 ---
