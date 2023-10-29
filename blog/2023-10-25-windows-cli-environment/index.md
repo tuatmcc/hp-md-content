@@ -1,9 +1,9 @@
 ---
 title: 部室PC荒らし行為まとめ
-date: 2023-10-25
+date: 2023-10-30
+author: ojii3
 ---
-環境構築の鬼に、俺はなる！(嘘です)
-
+環境構築の鬼に、俺はなる！
 
 # 動機
 
@@ -11,13 +11,11 @@ WindowsでLinuxみたいなCLI環境を作りたかった。
 
 私の所有する唯一のPCはArchLinux専用機になってしまったので、部室PCのWindowsをいじり倒すことにした。
 
-
 # 前提
 
 - Windows11
 
 WSLだと動機を満たせないので、今回のテーマ外とします。
-
 
 # 基本方針
 
@@ -38,8 +36,8 @@ scoop install 〇〇
 
 があります。どちらも`winget(scoop) search`などで検索できます。
 
-
 # 事前準備
+
 
 - PowerShell 7
 - Windowsターミナル
@@ -48,7 +46,7 @@ scoop install 〇〇
 - Caps2Ctrl
 - scoop
 
-PowerShell 7はクロスプラットフォームな最新のPowerShell (≠Windows PowerShell)。wingetで。
+PowerShell 7はクロスプラットフォームな最新のPowerShell (≠Windows PowerShell)。wingetで。PowerShellが起動時に読み込む設定はDocument\PowerShell\Microsoft.PowerShell_profile.ps1に書きます。
 
 WindowsターミナルはWindows11ならデフォルトで入っている。規定のシェルをPowerShell 7にする。お好みで背景を半透明にどうぞ。
 
@@ -76,10 +74,10 @@ scoopはWindows版brew的なインストーラー。管理者権限要らない�
 ryeとdenoはscoopで入れる。Visual C++ は Visual Studio Installerで。それ以外はwinget。Node.jsを開発用途で使う人は気合いでnodenvから入れるべし。
 
 
-# TUIツール
+# TUI
 
-- yazi (ファイラー)
-- Neovim (エディタ)
+- yazi
+- Neovim
 
 両方scoopで入る。
 
@@ -98,13 +96,15 @@ Neovimはターミナル内で起動するエディタ。あとで設定してVS
 # その他CLI
 
 - github-cli
-- fzf
+- fzf + PSFzf
 - ripgrep
 - unar
 
 github-cliはghコマンドでターミナルからGitHubの操作ができる。プルリクの作成、マージが特に便利。httpsでcloneする際の認証の設定もよしなにやってくれる。
 
-fzfはファジーファインダーで、色々なものを曖昧検索できる。他のものと合わせて便利に使える(要設定)
+fzfはファジーファインダーで、色々なものを曖昧検索できる。他のものと合わせて便利に使える(要設定)。
+設定にSet-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' - PSReadlineChordReverseHistory 'Ctrl+r'
+に追記。
 
 ripgrepはrust製の多機能で高速なgrep。他のもののと合わせて便利に使える。
 
