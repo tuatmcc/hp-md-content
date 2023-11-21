@@ -30,7 +30,6 @@ MCC からのお知らせ記事(活動報告も含む)は、`news`フォルダ�
 ```markdown title="blog/bocchi-the-rock/index.md"
 ---
 title: "ぼっち・ざ・ろっくを鑑賞しました"
-description: "ぼっち・ざ・ろっくをみた"
 img: "./bocchi-the-rock.webp"
 date: "2023-01-03"
 tags: [dev, web, nextjs]
@@ -38,7 +37,7 @@ author: "Goto Hitori"
 ---
 ```
 
-`title`, `date`は必須です。
+`title`, `date`は必須で、`date`についてはクォートで括ってください。
 
 また、画像の URL は、同じフォルダに画像をアップロードし、`./画像のファイル名`とするか、`httpsから始まる外部URL`でお願いします。
 
