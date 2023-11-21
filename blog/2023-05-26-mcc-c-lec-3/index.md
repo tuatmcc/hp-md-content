@@ -1,7 +1,7 @@
 ---
 title: MCC C言語部内講習会 第3回
 description: MCC C言語部内講習会 第3回 を行いました。
-date: 2023-05-26
+date: "2023-05-26"
 tags: [dev]
 ---
 
