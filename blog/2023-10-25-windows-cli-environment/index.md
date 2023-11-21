@@ -1,6 +1,6 @@
 ---
 title: 部室PC荒らし行為まとめ
-date: 2023-10-30
+date: "2023-10-30"
 author: ojii3
 ---
 環境構築の鬼に、俺はなる！
@@ -43,31 +43,49 @@ scoop install 〇〇
 - Windowsターミナル
 - Git for Windows
 - 白源フォント
-- Caps2Ctrl
+- Ctrl2Caps
 - scoop
+
+## PowerShell 7
 
 PowerShell 7はクロスプラットフォームな最新のPowerShell (≠Windows PowerShell)。wingetで。PowerShellが起動時に読み込む設定はDocument\PowerShell\Microsoft.PowerShell_profile.ps1に書きます。
 
-WindowsターミナルはWindows11ならデフォルトで入っている。規定のシェルをPowerShell 7にする。お好みで背景を半透明にどうぞ。
+## Windows Terminal
 
-gitはwingetで一発。
+WindowsターミナルはWindows11ならデフォルトで入っています。規定のシェルをPowerShell 7にする。お好みで背景を半透明にどうぞ。
 
-白源はNerdFont(様々なグリフを表示できる)対応の日本語フォント。GitHubの最新Releasesからダウンロード。Windowsターミナルの規定フォントに設定する。
+唯一の不満はWindowsに言語を日本語にするとアプリ名が「Terminal」ではなく「ターミナル」になり検索しづらくなること。
+
+## Git for Windows
+
+gitは`winget install git`で。SSH等の設定はよしなにする。
+
+## 白源 (NerdFont)
+
+白源はNerdFont(様々なグリフを表示できる)対応の日本語フォントです。GitHubの最新Releasesからダウンロードしてインストール、Windowsターミナルの規定フォントに設定します。
+
+## Ctrl2Caps
 
 Caps2CtrlはCapsLockをCtrlに変えるツール(PowerToysで上手くいかなかったため)。ググってexeをダウンロード。
 
-scoopはWindows版brew的なインストーラー。管理者権限要らないの良い。公式サイトのコマンドをPowerShellにコピペして実行。
+## Scoop
 
+`scoop`はWindows版CLIインストーラー。`winget`だけだと不十分なので。以下をPowerShellにて実行。
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+irm get.scoop.sh | iex
+```
 
 # コンパイラ・実行環境・パッケージマネージャー
 
-- llvm (C: clangその他)
-- gcc (C: gcc)
-- rustup (Rust: cargo, rustcその他)
-- nodejs-lts (JavaScript, TypeScript)
-- rye (Python: cpython, pipその他)
-- deno (TypeScript)
-- Visual C++ (C++)
+- `llvm` (C: clangその他)
+- `gcc` (C: gcc)
+- `rustup` (Rust: cargo, rustcその他)
+- `nodejs-lts` (JavaScript, TypeScript)
+- `rye` (Python: cpython, pipその他)
+- `deno` (TypeScript)
+- `Visual C++` (C++)
 
 それぞれ必要になったら入れるという感じで。
 
@@ -100,15 +118,31 @@ Neovimはターミナル内で起動するエディタ。あとで設定してVS
 - ripgrep
 - unar
 
-github-cliはghコマンドでターミナルからGitHubの操作ができる。プルリクの作成、マージが特に便利。httpsでcloneする際の認証の設定もよしなにやってくれる。
+## GitHub CLI
 
-fzfはファジーファインダーで、色々なものを曖昧検索できる。他のものと合わせて便利に使える(要設定)。
-設定にSet-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' - PSReadlineChordReverseHistory 'Ctrl+r'
-に追記。
+`gh`コマンドでターミナルからGitHubの操作ができる。プルリクの作成、マージが特に便利。GitHubの認証の設定もよしなにやってくれる。
 
-ripgrepはrust製の多機能で高速なgrep。他のもののと合わせて便利に使える。
+## fzf & PSFzf
 
-unarはunarchiverの略で、(圧縮)ファイル解凍ツール。zipだろうがtarだろうがgzだろうが7zipだろうが問答無用で解答してくれる。
+両方`scoop`でいれる。
+
+fzfはファジーファインダーで、色々なものを曖昧検索できる。少くともエクスプローラーの検索よりは断然速い。他にツールに組み込まれることが多い。
+
+一番のおすすめはシェルのコマンド履歴検索の拡張。PowerShellの設定に
+
+```powershell
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' - PSReadlineChordReverseHistory 'Ctrl+r'
+```
+
+を追記。これで`Ctrl + r`が強力になる。
+
+## RipGrep
+
+ripgrepはrust製の多機能で高速なgrep。他のもののと合わせて便利に使える。`yazi`や`Neovim`でも使う。
+
+## unar
+
+unarはunarchiverの略で、(圧縮)ファイル解凍ツール。zipだろうがtarだろうがgzだろうが7zipだろうが問答無用で解凍してくれる。
 
 # Neovimの設定
 
@@ -119,7 +153,6 @@ unarはunarchiverの略で、(圧縮)ファイル解凍ツール。zipだろう�
 
 - Windows10からWindows11にアップグレードした。
 - デスクトップやタスクバーのものを消した(自重して一部は残した)。
-- WSLにhomebrew(linuxbrew)を突っ込んだ。
 - Weztermを入れてデフォルトでwslのbashが起動する様にした。
 - Chrome拡張にVimiumを入れた。
 
