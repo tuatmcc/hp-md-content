@@ -8,7 +8,6 @@ author: sugawa
 
 部内 CTF 初心者会用に作った CpawCTF 2024 のカンニングシートです。
 
-
 # Level 1
 
 ## Q1.[Misc] Test Problem
@@ -41,15 +40,20 @@ int main()
 }
 ```
 
+<details>
+<summary>フラグ</summary>
+
 ```title="flag"
 cpaw{Caesar_cipher_is_classical_cipher}
 ```
+
+</details>
 
 ここでアルファベットだけ選んでますが、シーザー暗号になってるのがアルファベットだけなので、これで問題ないです。
 
 ```c
 ('A' <= flag[i] && flag[i] <= 'Z')
- 	        || ('a' <= flag[i] && flag[i] <= 'z')
+          || ('a' <= flag[i] && flag[i] <= 'z')
 ```
 
 アルファベット以外もやるとこうなります。
@@ -82,14 +86,18 @@ exec_me: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked
 
 出てきましたね。
 
+<details>
+<summary>フラグ</summary>
+
 ```
 cpaw{Do_you_know_ELF_file?}
 ```
 
+</details>
+
 ## Q8.[Misc] Can you open this file ?
 
 `file` コマンドを使います。
-
 
 ```bash
 file open_me
@@ -103,11 +111,16 @@ open_me: Composite Document File V2 Document, Little Endian, Os: Windows, Versio
 
 Word で開いてみましょう。
 
+<details>
+<summary>フラグ</summary>
+
 ![Q8-1.png](Q8-1.png)
 
 ```
 cpaw{Th1s_f1le_c0uld_be_0p3n3d}
 ```
+
+</details>
 
 ## Q9.[Web] HTML Page
 
@@ -115,11 +128,16 @@ cpaw{Th1s_f1le_c0uld_be_0p3n3d}
 
 `ctr+F` を押してページエレメントを `cpaw{` で検索すると出てきます。
 
+<details>
+<summary>フラグ</summary>
+
 ![Q9-1.png](Q9-1.png)
 
 ```
 cpaw{9216ddf84851f15a46662eb04759d2bebacac666}
 ```
+
+</details>
 
 ## Q10.[Forensics] River
 
@@ -127,12 +145,15 @@ cpaw{9216ddf84851f15a46662eb04759d2bebacac666}
 
 ![Q10-1.png](Q10-1.png)
 
+<details>
+<summary>フラグ</summary>
+
 甲突川(こうつきがわ)って言うらしい。
 
 ```
 cpaw{koutsukigawa}
 ```
 
+</details>
+
 ## Q11.[Network]pcap
-
-
