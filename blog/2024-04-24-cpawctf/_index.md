@@ -157,3 +157,39 @@ cpaw{koutsukigawa}
 </details>
 
 ## Q11.[Network]pcap
+
+`pcap` はパケットキャプチャファイルです。 `Wireshark` などのツールで開くことができます。
+
+[Wireshark のダウンロード](https://www.wireshark.org/download.html)
+
+<details>
+<summary>フラグ</summary>
+
+![Q11-1.png](Q11-1.png)
+
+```
+cpaw{gochi_usa_kami}
+```
+
+ごちうさ神！
+
+</details>
+
+## Q12.[Crypto]HashHashHash
+
+ハッシュ関数は、任意の長さのデータを固定長のデータに変換する関数です。ハッシュ関数は、同じデータに対しては必ず同じハッシュ値を返し、異なるデータに対しては異なるハッシュ値を返します。
+
+今回は SHA-1 という種類のハッシュ関数です。
+
+あるハッシュ値をググったりすると、ハッシュ値と元のデータのテーブルを持っているサイトが出てくるので、それを使って解読することができます。
+
+<details>
+<summary>フラグ</summary>
+
+[こーゆうサイト](https://md5hashing.net/hash/sha1/e4c6bced9edff99746401bd077afa92860f83de3)を使って解読してみましょう。
+
+```
+cpaw{Shal}
+```
+
+</details>
