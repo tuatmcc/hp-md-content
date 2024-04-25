@@ -260,3 +260,35 @@ cpaw{4re_y0u_1ook1ng_http_h3ader?}
 ```
 
 </details>
+
+## Q16.[Network+Forensic]HTTP Traffic
+
+WireShark で開いてみましょう。そして WireShark で通信してるファイルを復元します。ファイル → オブジェクトをエクスポート → HTTP で、すべて保存してください。
+
+![Q16-1.png](Q16-1.png)
+
+`network100` ダミーか、、、
+
+`network100(1).html` にして、ブラウザで開いてみましょう。
+
+![Q16-2.png](Q16-2.png)
+
+![Q16-3.png](Q16-3.png)
+
+うまく表示されない、、、どうやら `bootstrap.css` と `button2.js` がそれぞれ `css` と `js` というフォルダの中にあるようです。フォルダを作って、それぞれのファイルを移動してください。
+
+<details>
+<summary>フラグ</summary>
+
+![Q16-4.png](Q16-4.png)
+
+```
+cpaw{Y0u_r3st0r3d_7his_p4ge}
+```
+
+</details>
+
+<details>
+<summary>フラグ</summary>
+
+</details>
