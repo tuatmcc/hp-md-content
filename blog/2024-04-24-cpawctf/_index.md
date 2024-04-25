@@ -194,8 +194,7 @@ cpaw{Shal}
 
 </details>
 
-
-## Q14.[PPC]並べ替えろ!
+## Q14.[PPC]並べ替えろ
 
 ソートするプログラムを書きましょう。
 
@@ -208,19 +207,19 @@ cpaw{Shal}
 
 int cmpfunc(const void *a, const void *b)
 {
-	return (*(int *)b - *(int *)a);
+ return (*(int *)b - *(int *)a);
 }
 
 int main()
 {
-	int ciphertext[] = {15, 1, 93, 52, 66, 31, 87, 0, 42, 77, 46, 24, 99, 10, 19, 36, 27, 4, 58, 76, 2, 81, 50, 102, 33, 94, 20, 14, 80, 82, 49, 41, 12, 143, 121, 7, 111, 100, 60, 55, 108, 34, 150, 103, 109, 130, 25, 54, 57, 159, 136, 110, 3, 167, 119, 72, 18, 151, 105, 171, 160, 144, 85, 201, 193, 188, 190, 146, 210, 211, 63, 207};
-	int n = sizeof(ciphertext) / sizeof(ciphertext[0]);
-	qsort(ciphertext, n, sizeof(int), cmpfunc);
-	for (int i = 0; i < n; i++)
-	{
-		printf("%d", ciphertext[i]);
-	}
-	return 0;
+ int ciphertext[] = {15, 1, 93, 52, 66, 31, 87, 0, 42, 77, 46, 24, 99, 10, 19, 36, 27, 4, 58, 76, 2, 81, 50, 102, 33, 94, 20, 14, 80, 82, 49, 41, 12, 143, 121, 7, 111, 100, 60, 55, 108, 34, 150, 103, 109, 130, 25, 54, 57, 159, 136, 110, 3, 167, 119, 72, 18, 151, 105, 171, 160, 144, 85, 201, 193, 188, 190, 146, 210, 211, 63, 207};
+ int n = sizeof(ciphertext) / sizeof(ciphertext[0]);
+ qsort(ciphertext, n, sizeof(int), cmpfunc);
+ for (int i = 0; i < n; i++)
+ {
+  printf("%d", ciphertext[i]);
+ }
+ return 0;
 }
 ```
 
@@ -236,6 +235,28 @@ cpaw{211210207201193190188171167160159151150146144143136130121119111110109108105
 
 モールス信号です。[こーゆうサイト](https://morsedecoder.com/ja/)を使うとできます。
 
+<details>
+<summary>フラグ</summary>
+
 ```
-cpaw{HIDDEN_MESSAGE:)}
+cpaw{hidden_message:)}
 ```
+
+</details>
+
+## Q15.[Web] Redirect
+
+`http://q15.ctf.cpaw.site/` にアクセスすると `http://q9.ctf.cpaw.site/` にリダイレクトされます。ブラウザの拡張機能で `http://q15.ctf.cpaw.site/` にアクセスしたときの通信データを見てみましょう。 `ログを保持` や `Preserve log` をオンにしてください。
+
+<details>
+<summary>フラグ</summary>
+
+`http://q15.ctf.cpaw.site/` にアクセスしたときのレスポンスヘッダーにフラグがあります。
+
+![Q15-1.png](Q15-1.png)
+
+```
+cpaw{4re_y0u_1ook1ng_http_h3ader?}
+```
+
+</details>
