@@ -527,6 +527,23 @@ cpaw{yakiniku!}
 
 </details>
 
+## Q22.[Web]Baby's SQLi - Stage 1-
+
+`palloc_home` テーブルを表示する SQL を書きましょう。
+
+```
+select * from palloc_home;
+```
+
+<details>
+<summary>フラグ</summary>
+
+```
+cpaw{palloc_escape_from_stage1;(}
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
