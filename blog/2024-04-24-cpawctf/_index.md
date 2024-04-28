@@ -363,6 +363,34 @@ cpaw{It_is_fun__isn't_it?}
 
 </details>
 
+## Q20.[Crypto]Block Cipher
+
+ソースコードを見た感じ、コンパイルして引数に暗号文とテキトーな数字を入れるとフラグが出てくるようです。
+
+数字は 1 から順に入れていってみましょう。
+
+<details>
+<summary>フラグ</summary>
+
+4 回目で出ました。
+
+```bash
+$ ./a.out ruoYced_ehpigniriks_i_llrg_stae 1
+cpaw{ruoYced_ehpigniriks_i_llrg_stae}
+$ ./a.out ruoYced_ehpigniriks_i_llrg_stae 2
+cpaw{urYoec_dheipngriki_s_illgrs_ate}
+$ ./a.out ruoYced_ehpigniriks_i_llrg_stae 3
+cpaw{ourecYe_diphingkiri_sll__grats}
+$ ./a.out ruoYced_ehpigniriks_i_llrg_stae 4
+cpaw{Your_deciphering_skill_is_great}
+```
+
+```
+cpaw{Your_deciphering_skill_is_great}
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
