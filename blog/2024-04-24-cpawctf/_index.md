@@ -544,6 +544,31 @@ cpaw{palloc_escape_from_stage1;(}
 
 </details>
 
+## Q28.[Network] Can you login？
+
+Wireshark で開いてみましょう。
+
+![Q28-1.png](Q28-1.png)
+
+FTP 通信をしています。これはファイル転送プロトコルです。 FTP は暗号化せず、ユーザ名やパスワードが平文で送信されるため、セキュリティ上の問題があります。実際、 No.10 と No.14 のパケットを見ると、ユーザ名 `anonymous` とパスワード `anonymous` が平文で送信されています。しかし、 No.16 のパケットを見るとログインに失敗しているので、このユーザ名とパスワードは違うようです。 No.38 と No.42 のパケットを見ると、ユーザ名 `cpaw_user` とパスワード `5f4dcc3b5aa765d61d8327deb882cf99` が平文で送信されています。 これを使ってログインしてみましょう。
+
+FTP では、 FTP クライアントが必要です。 [FileZilla](https://filezilla-project.org/) などを使ってログインしてみましょう。
+
+ホスト (接続先) ははじめに DNS に問い合わせしている `q28.ctf.cpaw.site` です。 ユーザ名は `cpaw_user` です。 パスワードは `5f4dcc3b5aa765d61d8327deb882cf99` です。接続したら、 上にある `サーバー` → `強制的に隠しファイルを表示` をクリックしてください。
+
+`.hidden_flag_file` にフラグがあります。 ファイルを選択し、右クリックして表示してください。
+
+![Q28-2.png](Q28-2.png)
+
+<details>
+<summary>フラグ</summary>
+
+```
+cpaw{f4p_sh0u1d_b3_us3d_in_3ncryp4i0n}
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
