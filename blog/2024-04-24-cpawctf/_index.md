@@ -301,6 +301,47 @@ cpaw{parock}
 
 </details>
 
+# Q18.[Forensic]leaf in forest
+
+`pcap` かと思ったら違いました、、、 先頭 16 byte 以降に `lovelive!` がいっぱい書かれています。たまに大文字や `{}` が入っています。なので、 16 byte 以降で `A-Z` と `{}` と `_` だけを取り出します。
+
+![Q18-1.png](Q18-1.png)
+
+<details>
+<summary>フラグ</summary>
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+char buf[65565];
+char result[65565];
+int main()
+{
+    const char path[] = "misc100";
+    int index = 0;
+    FILE *fp = fopen(path, "r");
+
+    fread(buf, 1, sizeof(buf), fp);
+    fclose(fp);
+
+    for (int i = 16; i < sizeof(buf); i++)
+    {
+        if ('A' <= buf[i] && buf[i] <= 'Z' || buf[i] == '{' || buf[i] == '}' || buf[i] == '_')
+            result[index++] = buf[i];
+    }
+
+    puts(result);
+    return 0;
+}
+```
+
+```
+'cpaw{mgrep}'
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
