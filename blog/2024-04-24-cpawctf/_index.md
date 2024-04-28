@@ -342,6 +342,27 @@ cpaw{mgrep}
 
 </details>
 
+## Q19.[Misc]Image
+
+zip ファイルですが、解凍できません。 `file` コマンドで調べてみましょう。
+
+```
+misc100.zip: OpenDocument Drawing
+```
+
+どうやら `OpenDocument Drawing` というファイルのようです。  `OpenDocument Drawing` というのは `Word` で開くことができます。 `Word` などのファイルは実態が `zip` であることがよくあります。
+
+<details>
+<summary>フラグ</summary>
+
+![Q19-1.png](Q19-1.png)
+
+```
+cpaw{It_is_fun__isn't_it?}
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
