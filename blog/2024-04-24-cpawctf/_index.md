@@ -337,7 +337,7 @@ int main()
 ```
 
 ```
-'cpaw{mgrep}'
+cpaw{mgrep}
 ```
 
 </details>
