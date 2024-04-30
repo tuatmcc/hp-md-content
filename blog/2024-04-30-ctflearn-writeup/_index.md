@@ -38,6 +38,19 @@ CTFlearn{th4t_is_why_you_n33d_to_sanitiz3_inputs}
 
 </details>
 
+## Forensics 101
+
+バイナリエディタや `strings` コマンドを使うとフラグが出てきます。
+
+<details>
+<summary>Flag</summary>
+
+```title="flag"
+flag{wow!_data_is_cool}
+```
+
+</details>
+
 <details>
 <summary>Flag</summary>
 
