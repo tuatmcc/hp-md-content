@@ -51,6 +51,19 @@ flag{wow!_data_is_cool}
 
 </details>
 
+## Character Encoding
+
+[アスキーコード表](https://tuatmcc.com/blog/2024-01-26-ascii-table/) を見てエンコードしましょう。
+
+<details>
+<summary>Flag</summary>
+
+```title="flag"
+ABCTF{45C11_15_U53FUL}
+```
+
+</details>
+
 <details>
 <summary>Flag</summary>
 
