@@ -1,7 +1,7 @@
 ---
 title: CTF Learn Write Up
 date: "2024-04-30"
-author: sugawa
+author: sugawa197203
 ---
 
 # はじめに
@@ -40,7 +40,5 @@ CTFlearn{th4t_is_why_you_n33d_to_sanitiz3_inputs}
 
 <details>
 <summary>Flag</summary>
-
-
 
 </details>
