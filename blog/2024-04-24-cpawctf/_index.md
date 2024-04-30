@@ -682,6 +682,23 @@ cpaw{vernam!!}
 
 </details>
 
+## Q24.[Web]Baby's SQLi - Stage 2-
+
+sQL インジェクションの問題です。
+
+``select * from user_table where pass = '$pass';`` という SQL であると推測します。
+
+`$pass` が入力されたパスワードです。 ここで、パスワードに ``' or 1 = 1 --`` という文字列をいれると、 SQL は ``select * from user_table where pass = '' or 1 = 1 --';`` となり、 `1 = 1` は常に真なので、すべてのユーザが表示されます。 `--` はコメントアウトの記号です。 ほかの条件があっても、 `--` 以降はコメントとして見られるため、無視されます。
+
+<details>
+<summary>フラグ</summary>
+
+```
+cpaw{p@ll0c_1n_j@1l3:)}
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
