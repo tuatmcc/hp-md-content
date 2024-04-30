@@ -1,7 +1,7 @@
 ---
 title: CpawCTF Write Up
 date: "2024-04-24"
-author: sugawa
+author: sugawa197203
 ---
 
 # はじめに
@@ -571,7 +571,7 @@ cpaw{f4p_sh0u1d_b3_us3d_in_3ncryp4i0n}
 
 # Level 3
 
-## Q23.[Reversing]またやらかした！
+## Q23.[Reversing]またやらかした
 
 普通に実行しても何も表示されませんでした。
 
@@ -709,24 +709,24 @@ cpaw{p@ll0c_1n_j@1l3:)}
 
 int main()
 {
-	unsigned long long x = 32134;
-	unsigned long long mod;
-	while (1)
-	{
-		if (x % 3438478 == 193127)
-		{
-			printf("%lld\n", x);
-			break;
-		}
-		x += 1584891;
-		if (x < 0)
-		{
-			printf("No solution\n");
-			break;
-		}
-	}
+ unsigned long long x = 32134;
+ unsigned long long mod;
+ while (1)
+ {
+  if (x % 3438478 == 193127)
+  {
+   printf("%lld\n", x);
+   break;
+  }
+  x += 1584891;
+  if (x < 0)
+  {
+   printf("No solution\n");
+   break;
+  }
+ }
 
-	return 0;
+ return 0;
 }
 ```
 
