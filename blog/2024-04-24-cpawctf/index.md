@@ -6,7 +6,7 @@ author: sugawa
 
 # はじめに
 
-部内 CTF 初心者会用に作った CpawCTF 2024 のカンニングシートです。
+部内 CTF 初心者会用に作った CpawCTF のカンニングシートです。
 
 # Level 1
 
