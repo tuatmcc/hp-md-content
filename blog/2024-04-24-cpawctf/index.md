@@ -1,12 +1,12 @@
 ---
-title: CpawCTF カンニングシート
+title: CpawCTF Write Up
 date: "2024-04-24"
 author: sugawa
 ---
 
 # はじめに
 
-部内 CTF 初心者会用に作った CpawCTF のカンニングシートです。
+部内 CTF 初心者会用に作った CpawCTF Write Up です。
 
 # Level 1
 
