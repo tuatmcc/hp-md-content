@@ -699,6 +699,46 @@ cpaw{p@ll0c_1n_j@1l3:)}
 
 </details>
 
+## Q26.[PPC]Remainder theorem
+
+プログラムを書きましょう！
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	unsigned long long x = 32134;
+	unsigned long long mod;
+	while (1)
+	{
+		if (x % 3438478 == 193127)
+		{
+			printf("%lld\n", x);
+			break;
+		}
+		x += 1584891;
+		if (x < 0)
+		{
+			printf("No solution\n");
+			break;
+		}
+	}
+
+	return 0;
+}
+```
+
+<details>
+<summary>フラグ</summary>
+
+```
+cpaw{35430270439}
+```
+
+</details>
+
 <details>
 <summary>フラグ</summary>
 
