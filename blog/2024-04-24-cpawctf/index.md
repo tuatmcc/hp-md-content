@@ -58,7 +58,7 @@ cpaw{Caesar_cipher_is_classical_cipher}
 
 アルファベット以外もやるとこうなります。
 
-```
+```title="notflag"
 cpawxCaesar\cipher\is\classical\cipherz
 ```
 
@@ -68,13 +68,13 @@ cpawxCaesar\cipher\is\classical\cipherz
 
 はじめになんのバイナリファイルかを調べます。 `file` コマンドを使います。
 
-```bash
+```txt
 file exec_me
 ```
 
 こんなのが出てきます。
 
-```
+```txt
 exec_me: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=663a3e0e5a079fddd0de92474688cd6812d3b550, not stripped
 ```
 
@@ -89,7 +89,7 @@ exec_me: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{Do_you_know_ELF_file?}
 ```
 
@@ -103,7 +103,7 @@ cpaw{Do_you_know_ELF_file?}
 file open_me
 ```
 
-```
+```txt
 open_me: Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 932, Author: v, Template: Normal.dotm, Last Saved By: v, Revision Number: 1, Name of Creating Application: Microsoft Office Word, Total Editing Time: 28:00, Create Time/Date: Mon Oct 12 04:27:00 2015, Last Saved Time/Date: Mon Oct 12 04:55:00 2015, Number of Pages: 1, Number of Words: 3, Number of Characters: 23, Security: 0
 ```
 
@@ -116,7 +116,7 @@ Word で開いてみましょう。
 
 ![Q8-1.png](Q8-1.png)
 
-```
+```title="flag"
 cpaw{Th1s_f1le_c0uld_be_0p3n3d}
 ```
 
@@ -133,7 +133,7 @@ cpaw{Th1s_f1le_c0uld_be_0p3n3d}
 
 ![Q9-1.png](Q9-1.png)
 
-```
+```title="flag"
 cpaw{9216ddf84851f15a46662eb04759d2bebacac666}
 ```
 
@@ -150,7 +150,7 @@ cpaw{9216ddf84851f15a46662eb04759d2bebacac666}
 
 甲突川(こうつきがわ)って言うらしい。
 
-```
+```title="flag"
 cpaw{koutsukigawa}
 ```
 
@@ -167,7 +167,7 @@ cpaw{koutsukigawa}
 
 ![Q11-1.png](Q11-1.png)
 
-```
+```title="flag"
 cpaw{gochi_usa_kami}
 ```
 
@@ -188,7 +188,7 @@ cpaw{gochi_usa_kami}
 
 [こーゆうサイト](https://md5hashing.net/hash/sha1/e4c6bced9edff99746401bd077afa92860f83de3)を使って解読してみましょう。
 
-```
+```title="flag"
 cpaw{Shal}
 ```
 
@@ -212,18 +212,18 @@ int cmpfunc(const void *a, const void *b)
 
 int main()
 {
- int ciphertext[] = {15, 1, 93, 52, 66, 31, 87, 0, 42, 77, 46, 24, 99, 10, 19, 36, 27, 4, 58, 76, 2, 81, 50, 102, 33, 94, 20, 14, 80, 82, 49, 41, 12, 143, 121, 7, 111, 100, 60, 55, 108, 34, 150, 103, 109, 130, 25, 54, 57, 159, 136, 110, 3, 167, 119, 72, 18, 151, 105, 171, 160, 144, 85, 201, 193, 188, 190, 146, 210, 211, 63, 207};
- int n = sizeof(ciphertext) / sizeof(ciphertext[0]);
- qsort(ciphertext, n, sizeof(int), cmpfunc);
- for (int i = 0; i < n; i++)
- {
-  printf("%d", ciphertext[i]);
- }
- return 0;
+    int ciphertext[] = {15, 1, 93, 52, 66, 31, 87, 0, 42, 77, 46, 24, 99, 10, 19, 36, 27, 4, 58, 76, 2, 81, 50, 102, 33, 94, 20, 14, 80, 82, 49, 41, 12, 143, 121, 7, 111, 100, 60, 55, 108, 34, 150, 103, 109, 130, 25, 54, 57, 159, 136, 110, 3, 167, 119, 72, 18, 151, 105, 171, 160, 144, 85, 201, 193, 188, 190, 146, 210, 211, 63, 207};
+    int n = sizeof(ciphertext) / sizeof(ciphertext[0]);
+    qsort(ciphertext, n, sizeof(int), cmpfunc);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d", ciphertext[i]);
+    }
+    return 0;
 }
 ```
 
-```
+```title="flag"
 cpaw{2112102072011931901881711671601591511501461441431361301211191111101091081051031021009994938785828180777672666360585755545250494642413634333127252420191815141210743210}
 ```
 
@@ -238,7 +238,7 @@ cpaw{211210207201193190188171167160159151150146144143136130121119111110109108105
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{hidden_message:)}
 ```
 
@@ -255,7 +255,7 @@ cpaw{hidden_message:)}
 
 ![Q15-1.png](Q15-1.png)
 
-```
+```title="flag"
 cpaw{4re_y0u_1ook1ng_http_h3ader?}
 ```
 
@@ -282,7 +282,7 @@ WireShark で開いてみましょう。そして WireShark で通信してる�
 
 ![Q16-4.png](Q16-4.png)
 
-```
+```title="flag"
 cpaw{Y0u_r3st0r3d_7his_p4ge}
 ```
 
@@ -295,7 +295,7 @@ cpaw{Y0u_r3st0r3d_7his_p4ge}
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{parock}
 ```
 
@@ -336,7 +336,7 @@ int main()
 }
 ```
 
-```
+```title="flag"
 cpaw{mgrep}
 ```
 
@@ -346,7 +346,7 @@ cpaw{mgrep}
 
 zip ファイルですが、解凍できません。 `file` コマンドで調べてみましょう。
 
-```
+```txt
 misc100.zip: OpenDocument Drawing
 ```
 
@@ -357,7 +357,7 @@ misc100.zip: OpenDocument Drawing
 
 ![Q19-1.png](Q19-1.png)
 
-```
+```title="flag"
 cpaw{It_is_fun__isn't_it?}
 ```
 
@@ -385,7 +385,7 @@ $ ./a.out ruoYced_ehpigniriks_i_llrg_stae 4
 cpaw{Your_deciphering_skill_is_great}
 ```
 
-```
+```title="flag"
 cpaw{Your_deciphering_skill_is_great}
 ```
 
@@ -401,11 +401,11 @@ gdb rev100
 
 main 関数のアセンブリを見てみます。
 
-```
+```gdb
 (gdb) disas main
 ```
 
-```
+```gdb
 Dump of assembler code for function main:
    0x0804849d <+0>:     push   %ebp
    0x0804849e <+1>:     mov    %esp,%ebp
@@ -471,19 +471,19 @@ End of assembler dump.
 
 `0x08048531` にブレークポイントを刺します。
 
-```
+```gdb
 (gdb) break *0x08048531
 ```
 
 `r` で実行します。
 
-```
+```gdb
 (gdb) r
 ```
 
 `0x08048531` で停止します。 `disass` でアセンブリを見て見ましょう。矢印で指しているところが今の命令です。
 
-```
+```gdb
 (gdb) disass
 Dump of assembler code for function main:
    0x0804849d <+0>:     push   %ebp
@@ -508,20 +508,20 @@ Dump of assembler code for function main:
 
 `0x1c(%esp)` に `5` 以外の数字を代入します。ここでは `0x1c(%esp)` に `0` を代入します。
 
-```
+```gdb
 (gdb) p *(int*)($esp + 0x1c) = 0
 ```
 
 `c` で続行します。
 
-```
+```gdb
 (gdb) c
 ```
 
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{yakiniku!}
 ```
 
@@ -531,14 +531,14 @@ cpaw{yakiniku!}
 
 `palloc_home` テーブルを表示する SQL を書きましょう。
 
-```
+```sql
 select * from palloc_home;
 ```
 
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{palloc_escape_from_stage1;(}
 ```
 
@@ -563,7 +563,7 @@ FTP では、 FTP クライアントが必要です。 [FileZilla](https://filez
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{f4p_sh0u1d_b3_us3d_in_3ncryp4i0n}
 ```
 
@@ -583,7 +583,7 @@ gdb rev200
 
 main 関数のアセンブリを見てみます。
 
-```
+```gdb
 Dump of assembler code for function main:
    0x080483ed <+0>:     push   %ebp
    0x080483ee <+1>:     mov    %esp,%ebp
@@ -635,23 +635,23 @@ End of assembler dump.
 
 `0x08048497` にブレークポイントを刺して、 `-0x78(%ebp)` 以降のスタックの中身を見てみましょう。
 
-```
+```gdb
 (gdb) break *0x08048497
 ```
 
 実行
 
-```
+```gdb
 (gdb) r
 ```
 
 `-0x78(%ebp)` 以降のスタックの中身を 128 byte ほど表示します。
 
-```
+```gdb
 (gdb) x/128c $ebp - 0x78
 ```
 
-```
+```gdb
 (gdb) x/128c $ebp - 0x78
 0xffffc800:     122 'z' 0 '\000'        0 '\000'        0 '\000'        105 'i' 0 '\000'        0 '\000'        0 '\000'
 0xffffc808:     120 'x' 0 '\000'        0 '\000'        0 '\000'        110 'n' 0 '\000'        0 '\000'        0 '\000'
@@ -676,7 +676,7 @@ End of assembler dump.
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{vernam!!}
 ```
 
@@ -693,7 +693,7 @@ sQL インジェクションの問題です。
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{p@ll0c_1n_j@1l3:)}
 ```
 
@@ -733,7 +733,7 @@ int main()
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{35430270439}
 ```
 
@@ -768,7 +768,7 @@ print(m)
 <details>
 <summary>フラグ</summary>
 
-```
+```title="flag"
 cpaw{424311244315114354}
 ```
 
