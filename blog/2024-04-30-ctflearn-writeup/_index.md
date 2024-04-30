@@ -64,6 +64,19 @@ ABCTF{45C11_15_U53FUL}
 
 </details>
 
+## Taking LS
+
+Zip ファイルを解凍して中身を見るとパスワード付きPDFがあります。パスワードは `ThePassword.txt` に書いてあります。
+
+<details>
+<summary>Flag</summary>
+
+```title="flag"
+ABCTF{T3Rm1n4l_is_C00l}
+```
+
+</details>
+
 <details>
 <summary>Flag</summary>
 
