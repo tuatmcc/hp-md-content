@@ -207,7 +207,7 @@ cpaw{Shal}
 
 int cmpfunc(const void *a, const void *b)
 {
- return (*(int *)b - *(int *)a);
+    return (*(int *)b - *(int *)a);
 }
 
 int main()
@@ -393,7 +393,46 @@ cpaw{Your_deciphering_skill_is_great}
 
 ## Q21.[Reversing]reversing easy
 
-普通に実行すると `cpaw{}` だけが出てきます。 `gdb` を使って中のアセンブリを見てみます。以下のコマンドで起動します。
+普通に実行すると `cpaw{}` だけが出てきます。
+
+```bash
+./rev100
+cpaw{}
+```
+
+<details>
+<summary>-bash: ./rev100: No such file or directory と出る場合</summary>
+
+```bash
+./rev100
+-bash: ./rev100: No such file or directory
+```
+
+この `rev100` というバイナリですが、 `file` コマンドを使ってみると、 32bit 用のバイナリであることがわかります。 そのため、 32bit 用の共有ライブラリがないと実行することができません。
+
+```bash
+file rev100
+rev100: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=f94360edd84a940de2b74007d4289705601d618d, not stripped
+```
+
+32bit 用の共有ライブラリ `/lib/ld-linux.so.2` の有無は以下のコマンドで確認できます。
+
+```bash
+ls /lib/ld-linux.so.2
+ls: cannot access '/lib/ld-linux.so.2': No such file or directory
+```
+
+`/lib/ld-linux.so.2` は、以下のコマンドでインストールします。
+
+```bash
+sudo apt install lib32z1
+```
+
+これで実行できるようになります。
+
+</details>
+
+`gdb` を使って中のアセンブリを見てみます。以下のコマンドで起動します。
 
 ```bash
 gdb rev100
@@ -709,24 +748,24 @@ cpaw{p@ll0c_1n_j@1l3:)}
 
 int main()
 {
- unsigned long long x = 32134;
- unsigned long long mod;
- while (1)
- {
-  if (x % 3438478 == 193127)
-  {
-   printf("%lld\n", x);
-   break;
-  }
-  x += 1584891;
-  if (x < 0)
-  {
-   printf("No solution\n");
-   break;
-  }
- }
+    unsigned long long x = 32134;
+    unsigned long long mod;
+    while (1)
+    {
+        if (x % 3438478 == 193127)
+        {
+            printf("%lld\n", x);
+            break;
+        }
+        x += 1584891;
+        if (x < 0)
+        {
+            printf("No solution\n");
+            break;
+        }
+    }
 
- return 0;
+    return 0;
 }
 ```
 
