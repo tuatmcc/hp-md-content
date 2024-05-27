@@ -12,19 +12,25 @@ author: sugawa197203
 
 # もくじ
 
-- [First Find](#first-find)
-- [Big Zip](#big-zip)
-- [ASCII FTW](#ascii-ftw)
-- [ASCII Numbers](#ascii-numbers)
-- [Bit-O-Asm-1](#bit-o-asm-1)
-- [Bit-O-Asm-2](#bit-o-asm-2)
-- [Bit-O-Asm-3](#bit-o-asm-3)
-- [Bit-O-Asm-4](#bit-o-asm-4)
-- [GDB baby step 1](#gdb-baby-step-1)
-- [GDB baby step 2](#gdb-baby-step-2)
-- [GDB baby step 3](#gdb-baby-step-3)
-- [GDB baby step 4](#gdb-baby-step-4)
-- [Local Target](#local-target)
+- [はじめに](#はじめに)
+- [もくじ](#もくじ)
+- [First Find (General Skills)](#first-find-general-skills)
+- [Big Zip (General Skills)](#big-zip-general-skills)
+- [ASCII FTW (Reverse Engineering)](#ascii-ftw-reverse-engineering)
+- [ASCII Numbers (General Skills)](#ascii-numbers-general-skills)
+- [Bit-O-Asm-1 (Reverse Engineering)](#bit-o-asm-1-reverse-engineering)
+- [Bit-O-Asm-2 (Reverse Engineering)](#bit-o-asm-2-reverse-engineering)
+- [Bit-O-Asm-3 (Reverse Engineering)](#bit-o-asm-3-reverse-engineering)
+- [Bit-O-Asm-4 (Reverse Engineering)](#bit-o-asm-4-reverse-engineering)
+- [GDB baby step 1 (Reverse Engineering)](#gdb-baby-step-1-reverse-engineering)
+- [GDB baby step 2 (Reverse Engineering)](#gdb-baby-step-2-reverse-engineering)
+- [GDB baby step 3 (Reverse Engineering)](#gdb-baby-step-3-reverse-engineering)
+- [GDB baby step 4 (Reverse Engineering)](#gdb-baby-step-4-reverse-engineering)
+- [Local Target (Binary Exploitation)](#local-target-binary-exploitation)
+- [Picker I (Reverse Engineering)](#picker-i-reverse-engineering)
+- [Picker II (Reverse Engineering)](#picker-ii-reverse-engineering)
+- [Picker III (Reverse Engineering)](#picker-iii-reverse-engineering)
+- [Picker IV (Binary Exploitation)](#picker-iv-binary-exploitation)
 
 # First Find (General Skills)
 
@@ -442,3 +448,157 @@ picoCTF{l0c4l5_1n_5c0p3_7bd3fee1}
 ```
 
 </details>
+
+# Picker I (Reverse Engineering)
+
+`launch instance` を押すとソースコードとバイナリが渡されるので、ソースコードを見ながら実行してみましょう。`Try entering "getRandomNumber" without the double quotes` と出てくるので、`getRandomNumber` と入力すると `4` が出てきます。
+
+プログラムは Python のコードが渡されます。入力した文字列は `eval` 関数に `()` をつけて渡されます。Python の `eval` 関数は文字列を Python のコードとして実行します。例えば以下のPythonコードを考えます。
+
+```python
+eval("1 + 2")
+```
+
+このコードは `1 + 2` を実行して `3` を返します。
+
+`getRandomNumber` 関数では `4` を出力する関数になっています。
+
+```python
+def getRandomNumber():
+    print(4)
+```
+
+そのため、`getRandomNumber` と入力すると `4` が出力されます。
+
+ここで、`win` 関数を見てみましょう。`win` 関数では、 `flag.txt` を読み込んでフラグを出力します。このことから、`win` を入力すれば、 `eval` 関数で `win` 関数が実行され、フラグが出力されそうです。
+
+フラグは 16 進数で表示されるので、以下のようなPythonコードを作ってあげると文字列の形でフラグを取得できます。
+
+```python
+flagbin = input("inputflag: ")
+flag = ""
+
+for c in flagbin.split():
+	flag += chr(int(c, 16))
+
+print(flag)
+```
+
+<details>
+<summary>フラグ</summary>
+
+```txt
+picoCTF{4_d14m0nd_1n_7h3_r0ugh_6e04440d}
+```
+
+</details>
+
+# Picker II (Reverse Engineering)
+
+`launch instance` を押すとソースコードとバイナリが渡されるので、ソースコードを見ながら実行してみましょう。`filter` 関数では、入力した文字列に `win` が含まれているかを判定します。そのため、`win` と入力すると、`Illegal input` と出力され、`win` 関数が実行されません。
+
+このことから、`win` の文字列をそのまま入力するのではなく、分割して、`"wi" + "n"` で入力してあげましょう。文字列の足し算を実行させてから、`win` 関数を実行させる必要があるため、入力にも `eval` 関数を使います。よって、入力は以下のようにすれば、フラグが16進数で出てきます。
+
+```txt
+eval("wi"+"n()")
+```
+
+`'NoneType' object is not callable` と出てきますが、これは、もともとの `eval` 関数で実行する文字列が `"eval("wi"+"n()")()"` となり、`eval("wi"+"n()")` が `None` を返すためです。フラグは出てくるので問題ありません。
+
+<details>
+<summary>フラグ</summary>
+
+```txt
+picoCTF{f1l73r5_f41l_c0d3_r3f4c70r_m1gh7_5ucc33d_0b5f1131}
+```
+
+</details>
+
+# Picker III (Reverse Engineering)
+
+`launch instance` を押すとソースコードとバイナリが渡されるので、ソースコードを見ながら実行してみましょう。
+
+`1`, `2`, `3`, `4` の入力すると、`func_table` に書かれている関数名の関数を実行するそうです。初期では、`1`, `2`, `3`, `4` を入力するとそれぞれ、 `print_table`, `read_variable`, `write_variable`, `getRandomNumber` が実行されます。なんとかして `win` 関数を実行させましょう。
+
+`func_table` に `win` を書き込んで、`1` を入力すれば、 `win` 関数を呼び出せそうです。
+
+`write_variable` では、任意の変数に値を代入できそうです。ちなみに、`func_table` と `win` を入力したら、`global func_table; func_table = win` になって、 `func_table` には、文字列 `win` ではなく、`win` **関数**が代入され、`func_table` が文字列ではなくなって、`TypeError: object of type 'function' has no len()` となり正しく動作しなくなります。
+
+さらに、`call_func` では、`func_table` に書かれている文字数を判定していて、128 文字でないと実行できません。そのため `write_variable` での入力は以下の2つです。`win` を入力するときは、 ダブルクォーテーションで囲み、中に`win` と空白合わせて 128 文字入れます。
+
+```txt
+func_table
+```
+
+```txt
+"win                                                                                                                             "
+```
+
+これで、`func_table` に `win` が入るので、 `1` を入力すれば、`win` 関数が実行されます。
+
+<details>
+<summary>フラグ</summary>
+
+```txt
+picoCTF{7h15_15_wh47_w3_g37_w17h_u53r5_1n_ch4rg3_a186f9ac}
+```
+
+</details>
+
+# Picker IV (Binary Exploitation)
+
+`launch instance` を押すとソースコードとバイナリが渡されるので、ソースコードを見ながら実行してみましょう。
+
+`main` 関数の `val` に入ってる数値をアドレスとして、そのアドレスの関数を実行するそうです。`win` 関数のアドレスを確認しましょう。`gdb` を使って確認します。
+
+```bash
+gdb ./picker-IV
+```
+
+以下のコマンドで `win` 関数のアドレスを確認します。
+
+```txt
+info functions
+```
+
+```txt
+All defined functions:
+
+Non-debugging symbols:
+0x0000000000401000  _init
+0x00000000004010e0  putchar@plt
+0x00000000004010f0  puts@plt
+0x0000000000401100  fclose@plt
+0x0000000000401110  printf@plt
+0x0000000000401120  fgetc@plt
+0x0000000000401130  signal@plt
+0x0000000000401140  setvbuf@plt
+0x0000000000401150  fopen@plt
+0x0000000000401160  __isoc99_scanf@plt     
+0x0000000000401170  exit@plt
+0x0000000000401180  sleep@plt
+0x0000000000401190  _start
+0x00000000004011c0  _dl_relocate_static_pie
+0x00000000004011d0  deregister_tm_clones   
+0x0000000000401200  register_tm_clones     
+0x0000000000401240  __do_global_dtors_aux  
+0x0000000000401270  frame_dummy
+0x0000000000401276  print_segf_message
+0x000000000040129e  win
+0x0000000000401334  main
+0x00000000004013d0  __libc_csu_init
+0x0000000000401440  __libc_csu_fini
+0x0000000000401448  _fini
+```
+
+`win` 関数のアドレスは `0x000000000040129e` のようです。この値を `val` に入れてあげましょう。
+
+<details>
+<summary>フラグ</summary>
+
+```txt
+picoCTF{n3v3r_jump_t0_u53r_5uppl13d_4ddr35535_14bc5444}
+```
+
+</details>
+
