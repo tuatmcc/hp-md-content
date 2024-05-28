@@ -92,10 +92,10 @@ for i in binstr:
 print(flag)
 ```
 
-ubuntu なら、python3 がインストールされているので、`slove.py`というファイルにコードを書いたら、以下のコマンドで実行できます。
+ubuntu なら、python3 がインストールされているので、`solve.py`というファイルにコードを書いたら、以下のコマンドで実行できます。
 
 ```bash
-python3 slove.py
+python3 solve.py
 ```
 
 <details>
