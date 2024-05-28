@@ -618,7 +618,7 @@ sudo apt-get install aircrack-ng
 aircrack-ng wpa-ing_out.pcap -w rockyou.txt
 ```
 
-```
+```txt
                                Aircrack-ng 1.6 
 
       [00:00:05] 92099/10303727 keys tested (17921.19 k/s)
