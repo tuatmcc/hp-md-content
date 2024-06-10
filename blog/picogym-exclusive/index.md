@@ -8,8 +8,6 @@ author: sugawa197203
 
 部内 CTF 初心者会用に作った [picoGym Exclusive](https://play.picoctf.org/practice?originalEvent=gym) の Writeup です。
 
-この記事は書き途中です。
-
 # もくじ
 
 - [はじめに](#はじめに)
@@ -31,6 +29,8 @@ author: sugawa197203
 - [Picker II (Reverse Engineering)](#picker-ii-reverse-engineering)
 - [Picker III (Reverse Engineering)](#picker-iii-reverse-engineering)
 - [Picker IV (Binary Exploitation)](#picker-iv-binary-exploitation)
+- [WPA-ing Out (Forensics)](#wpa-ing-out-forensics)
+- [JAuth (Web Exploitation)](#jauth-web-exploitation)
 
 # First Find (General Skills)
 
@@ -92,10 +92,10 @@ for i in binstr:
 print(flag)
 ```
 
-ubuntu なら、python3 がインストールされているので、`slove.py`というファイルにコードを書いたら、以下のコマンドで実行できます。
+ubuntu なら、python3 がインストールされているので、`solve.py`というファイルにコードを書いたら、以下のコマンドで実行できます。
 
 ```bash
-python3 slove.py
+python3 solve.py
 ```
 
 <details>
@@ -479,7 +479,7 @@ flagbin = input("inputflag: ")
 flag = ""
 
 for c in flagbin.split():
-	flag += chr(int(c, 16))
+ flag += chr(int(c, 16))
 
 print(flag)
 ```
@@ -602,3 +602,77 @@ picoCTF{n3v3r_jump_t0_u53r_5uppl13d_4ddr35535_14bc5444}
 
 </details>
 
+# WPA-ing Out (Forensics)
+
+`wpa-ing_out.pcap` を開いてみてください (WiresharkでOKです)。このパケットの中身は WiFi の通信です。`Aircrack-ng` を使ってパスワードを解読します。パスワードを解読する際、`rockyou.txt` というパスワードリストを使って辞書攻撃をします。`rockyou.txt` とは簡単に言えばよく使われるパスワードのリストです(詳しくはぐぐると出てきます)。Google等で `rockyou.txt` と検索するとダウンロードできます。
+
+`Aircrack-ng` をダウンロードしましょう。
+
+```bash
+sudo apt-get install aircrack-ng
+```
+
+`wpa-ing_out.pcap` と `rockyou.txt` を同じディレクトリに入れ、そのディレクトリで以下のコマンドを実行します。
+
+```bash
+aircrack-ng wpa-ing_out.pcap -w rockyou.txt
+```
+
+```txt
+                               Aircrack-ng 1.6 
+
+      [00:00:05] 92099/10303727 keys tested (17921.19 k/s)
+
+      Time left: 9 minutes, 29 seconds                           0.89%     
+
+                          KEY FOUND! [ mickeymouse ]
+
+
+      Master Key     : E0 5D 7B 25 3D 9D CA 85 F7 04 CD 58 CD 94 EF 99     
+                       70 0A 8C A9 BF 1E 7E E3 25 AC D7 79 43 5F E9 B9     
+
+      Transient Key  : 50 F5 69 BA F9 28 CE 71 AE ED 1F 1E B9 A2 68 10     
+                       49 73 A7 28 1A 0B E4 9A 7B C8 21 89 93 2E 28 1B     
+                       8C 28 57 98 49 C3 FC FD 03 F4 3E 7A B1 04 F2 34     
+                       93 D6 12 FE 2E FB A2 73 29 EC E4 80 3B BA 30 A4     
+
+      EAPOL HMAC     : AB 46 CB 89 1C 89 12 23 21 BF 92 C2 A8 7D CB 58
+```
+
+<details>
+<summary>フラグ</summary>
+
+🐀
+
+```txt
+picoCTF{mickeymouse}
+```
+
+</details>
+
+# JAuth (Web Exploitation)
+
+JWTでは署名検証回避をすることができます。
+
+`JWT` とは、`JSON Web Token` の略で、`ヘッダー.ペイロード.署名` の構文で、JSONデータに署名と暗号化を施したものです。くわしくは[wiki](https://ja.wikipedia.org/wiki/JSON_Web_Token)みてね
+
+`launch instance` を押すと開けるサイトを開いてください。サンプルのユーザーとパスワードの `test`, `Test123!` を入力してログインします。ログインすると、テストページが開けます。
+
+テストページを開いたら開発者ツールを開いて、`Application` タブを開きます。そして、 `Storage` の `Cookies` に `token` があります。この `token` をいじって admin 画面を開きましょう。
+
+![token](./d.png)
+
+[token.dev](https://token.dev/) を使うと編集できます。`JWT String` に token を入れてください。
+
+![token.dev](./e.png)
+
+上にある `Algorithm` を `none` にして、`Payload` の `role` を `"user"` から `"admin"` にしてください。そうすると `JWT String` が変わります。変わったら、最後に `.` をつけてください。JWT の構文は `ヘッダー.ペイロード.署名` なので、署名が空文字だと、最後が `.` で終わっている必要があります。この変わった token でブラウザの開発者ツールの `Cookies` の token を上書きしてください。そして再読み込みするとフラグが出てきます。
+
+<details>
+<summary>フラグ</summary>
+
+```txt
+picoCTF{succ3ss_@u7h3nt1c@710n_72bf8bd5}
+```
+
+</details>
