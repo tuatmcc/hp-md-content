@@ -20,8 +20,6 @@ author: "sugawa197203"
 
 * Transform
   * 座標移動
-    * Quaternion は詳しく触れない
-      * `Quaternion.Euler` で済ませる
   * 回転
 * Rigidbody
   * 自由落下
@@ -31,10 +29,6 @@ author: "sugawa197203"
     * OnCollision
     * OnTrigger
 * Prefab
-  * Mesh
-    * 別にそんなに深く触れない
-  * MeshRenderer
-    * 別にそんなに深く触れない
 * AudioSource
 * AudioListener
 * Camera
@@ -64,7 +58,6 @@ author: "sugawa197203"
 * [SerializeField]
 * Start
 * Update
-* FixedUpdate
 * GetComponent
 * OnCollisionEnter
 * OnTriggerEnter
@@ -1007,3 +1000,109 @@ Assets で右クリック -> `Create` -> `Material` を選択
 再生ボタンを押してみてください。
 
 ![ChangeBall](./img/12.2.1.gif)
+
+# 13. 音を鳴らす
+
+ここでは、ボールが得点に触れたときに音を鳴らしたり、BGMを鳴らす処理を追加します。
+
+今回は、ボールを取ったときの音に効果音ラボの音、BGMにはNCSの音を使います。
+
+[効果音ラボ](https://soundeffect-lab.info/sound/button/)
+
+[NCS](https://ncs.io/)
+
+この中から、好きな音をダウンロードしてください。例では効果音ラボから `成功音` 、NCS から `Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release]` `Diamond Eyes - Worship [NCS Release]` `Egzod, Maestro Chives, Neoni - Royalty [NCS Release]` をダウンロードしました
+
+ダウンロードしたら、`Assets` にドラッグアンドドロップしてください。
+
+![Sound](./img/13.1.1.webp)
+
+## 13.1. 得点を取ったときの効果音を鳴らす
+
+Hierarchy で `Sphere` を選択し、`Inspector` で `Add Component` をクリック -> `Audio` -> `Audio Source` を選択
+
+`BallController` を開いて以下を追加してください。
+
+```csharp title="BallController.cs" showLineNumbers
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class BallController : MonoBehaviour
+{
+    private Rigidbody rb;
+    private int score = 0;
++	private AudioSource audioSource;
+    [SerializeField] private Text scoreText;
++	[SerializeField] private AudioClip ScoreSound;
+
+	// Start is called before the first frame update
+	void Start()
+    {
+        rb = GetComponent<Rigidbody>();
++		audioSource = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.W))
+		{
+			rb.AddForce(new Vector3(0, 0, 1));
+		}
+
+        if(Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(new Vector3(0, 0, -1));
+		}
+
+        if(Input.GetKey(KeyCode.A))
+		{
+			rb.AddForce(new Vector3(-1, 0, 0));
+        }
+
+		if(Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(new Vector3(1, 0, 0));
+		}
+    }
+
+    private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.name == "Score(Clone)")
+		{
+			score++;
+			Debug.Log("Score: " + score);
+			Destroy(other.gameObject);
+			scoreText.text = "Score: " + score;
++			audioSource.PlayOneShot(ScoreSound);
+			if (score == 10)
+			{
+				SceneManager.LoadScene("GameClear");
+			}
+		}
+	}
+}
+```
+
+`Sphere` の Inspector から `Add Component` -> `Audio` -> `Audio Source` を選択
+
+`Sphere` の `BallController` の Inspector にある `Score Sound` に `成功音` をドラッグアンドドロップしてください。
+
+![Sound](./img/13.1.2.webp)
+
+再生ボタンを押してみてください。スコアにふれると音が鳴ることがわかります。
+
+## 13.2. BGMを鳴らす
+
+`Hierarchy` で `Main Camera` を選択し、`Inspector` で `Add Component` をクリック -> `Audio` -> `Audio Source` を選択
+
+`Main Camera` の Inspector にある `Audio Source` の `AudioClip` にお好きな曲をドラッグアンドドロップしてください。そして、 `Play On Awake` と `Loop` にチェックを入れてください。
+
+![Sound](./img/13.2.1.webp)
+
+これを他の2つのシーン (`Title`, `GameClear`) にも行ってください。
+
+再生ボタンを押してみてください。BGMが流れることがわかります。
