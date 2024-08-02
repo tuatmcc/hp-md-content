@@ -541,7 +541,7 @@ public class BallController : MonoBehaviour
 
 また、今のままでは、スコアにふれると一瞬ボールの動きが止まってしまいます。これは物理演算をするための当たり判定もあるためです。そこで、Project にある `Score` プレバブの `Box Collider` の `Is Trigger` にチェックを入れてください。そして、`BallController` の `OnCollisionEnter` 関数を `OnTriggerEnter` 関数に変更してください。
 
-```csharp title="BallController.cs" showLineNumbers /other/
+```csharp title="BallController.cs" showLineNumbers /other/#s
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
