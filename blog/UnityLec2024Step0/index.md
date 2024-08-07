@@ -1,3 +1,9 @@
+---
+title: "Unity 講習会 2024 環境構築"
+date: "2024-07-20"
+author: "sugawa197203"
+---
+
 # Unity 講習会 環境構築編
 
 Unity 講習会では、 Unity 本体と、コードエディタとして Visual Studio を使います。ここでは、そのふたつのインストールについて行います。
