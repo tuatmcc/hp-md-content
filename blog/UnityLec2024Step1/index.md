@@ -986,7 +986,9 @@ Assets で右クリック -> `Create` -> `Material` を選択
 
 マテリアルの名前を `BallMaterial` に変更してください。
 
-`BallMaterial` を選択し、`Inspector` で `Base Map` の `Texture` に `BallTexture` をドラッグアンドドロップしてください。
+`BallMaterial` を選択し、`Inspector` で `Base Map` の左の四角いところに `BallTexture` をドラッグアンドドロップしてください。
+
+ドラッグアンドドロップしたら四角いところがテクスチャになります。
 
 ![Material](./img/12.2.1.webp)
 
