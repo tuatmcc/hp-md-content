@@ -24,7 +24,7 @@ Unity Hub を起動して、サインインしてください。アカウント�
 
 ## Visual Studio
 
-**Mac では Visual Studio が使えないようです。Mac では vscode か Rider を推奨します。**
+**Mac では Visual Studio が使えないようです。Mac では vscode か Rider を推奨します。 Rider を使うには、[こちらの記事](https://tuatmcc.com/blog/RiderStudents/)を読んでください。**
 
 [ここから](https://visualstudio.microsoft.com/ja/downloads/)ダウンロード
 
