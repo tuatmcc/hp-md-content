@@ -75,10 +75,7 @@ author: "sugawa197203"
 * "WASD" で玉を操作
 * 玉がアイテムに触れたらスコアが増える
 * スコアが 10 になったらゲームクリア
-* ゲームオーバーかゲームクリアしたらタイトルに戻る
-* 加速タイルに乗ったら玉が加速する
-* 動く足場とかも作る
-* 玉が穴に落ちたらゲームオーバー
+* ゲームクリアしたらタイトルに戻る
 
 # 2. プロジェクトを作る
 
@@ -99,7 +96,7 @@ author: "sugawa197203"
 
 ![Unity Hub でプロジェクトを作る](./img/2.1.1.webp)
 
-7. こんな感じに鳴ってればOK
+7. こんな感じになってればOK
 
 ![Unity Hub でプロジェクトを作る](./img/2.1.2.webp)
 
@@ -172,7 +169,7 @@ Hierarchyで右クリック -> 3D Object -> Sphere を選択
 
 ゲームオブジェクトに物理演算を追加するには、Unity の物理演算の要素の `Rigidbody` を追加します。
 
-`Hierarchy`で`Sphere`を選択し、`Inspector`で下の方にある`Add Component` -> `Physics` -> `Rigidbody` をクリック
+`Hierarchy`で`Sphere`を選択し、`Inspector`で一番下にある`Add Component` -> `Physics` -> `Rigidbody` をクリック
 
 ![Rigidbody](./img/4.1.1.webp)
 
@@ -210,7 +207,7 @@ Hierarchyで右クリック -> 3D Object -> Sphere を選択
 
 以下のようにスクリプトを書き換えてください。プログラムの説明は後で行います。
 
-```csharp title="BallController.cs" showLineNumbers
+```diff title="BallController.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -314,7 +311,7 @@ Prefab とは、ゲームオブジェクトの設計図のようなものです�
 
 以下のようにスクリプトを書き換えてください。プログラムの説明は後で行います。
 
-```csharp title="ScoreManager.cs" showLineNumbers
+```diff title="ScoreManager.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -351,7 +348,7 @@ Hierarchy で右クリック -> `Create Empty` を選択
 
 EnptyObject は、コンポーネントが何もついていないゲームオブジェクトです。このゲームオブジェクトに`ScoreManager`をアタッチします。
 
-`ScoreManager` を Project から Hierarchy にドラッグアンドドロップしてください。そして、`ScoreManager` の Inspector にある `Score Object` に `Score` の Prefab をドラッグアンドドロップしてください。
+`ScoreManager` を Project から Hierarchy の `ScoreManager` オブジェクトにドラッグアンドドロップしてください。そして、`ScoreManager` の Inspector にある `Score Object` に `Score` の Prefab をドラッグアンドドロップしてください。
 
 ![Attach Script](./img/6.2.3.webp)
 
@@ -387,7 +384,7 @@ EnptyObject は、コンポーネントが何もついていないゲームオ�
 
 `CameraController` という名前のスクリプトを作成して、以下のように書き換えてください。
 
-```csharp title="CameraController.cs" showLineNumbers
+```diff title="CameraController.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -450,7 +447,7 @@ public class CameraController : MonoBehaviour
 
 `BallController` を以下のように書き換えてください。
 
-```csharp title="BallController.cs" showLineNumbers
+```diff title="BallController.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -541,7 +538,7 @@ public class BallController : MonoBehaviour
 
 また、今のままでは、スコアにふれると一瞬ボールの動きが止まってしまいます。これは物理演算をするための当たり判定もあるためです。そこで、Project にある `Score` プレバブの `Box Collider` の `Is Trigger` にチェックを入れてください。そして、`BallController` の `OnCollisionEnter` 関数を `OnTriggerEnter` 関数に変更してください。
 
-```csharp title="BallController.cs" showLineNumbers /other/#s
+```diff title="BallController.cs" showLineNumbers /other/#s
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -624,6 +621,8 @@ Canvas とは、 Unity で UI を使うときに必要なゲームオブジェ�
 
 `Text` の Position を (-470, 242, 0)、 `Text` を `Score: 0`、Font Size を 27 に変更してください。 Color では好きな色にすることができます。
 
+環境(ディスプレイ解像度)によって位置が変わります。座標の位置はいい感じにしてください。
+
 ![Text](./img/9.2.1.webp)
 
 これで、左上の方にスコアが表示されるようになりました。
@@ -634,7 +633,7 @@ Canvas とは、 Unity で UI を使うときに必要なゲームオブジェ�
 
 `BallController` にスコアを表示するスクリプトを追加します。
 
-```csharp title="BallController.cs" showLineNumbers
+```diff title="BallController.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -738,7 +737,7 @@ File -> `Build Settings` を選択し、`Add Open Scenes` をクリックして 
 
 `Hierarchy`で右クリック -> `UI` -> `Legacy` -> `Text` を選択
 
-オブジェクト名は `Title` に変更してください。そして、`Title` の Position を (0, 0, 0) に変更してください。`Title` の Text を `RollingBall` 、Font Size を 50 、Hight と Width を (250, 270) になるように調整してください。
+オブジェクト名は `Title` に変更してください。そして、`Title` の Position を (0, 0, 0) に変更してください。`Title` の Text を `RollingBall` 、Font Size を 50 、Width と Hight を (250, 70) になるように調整してください。
 
 ![Title](./img/10.2.1.webp)
 
@@ -748,7 +747,7 @@ File -> `Build Settings` を選択し、`Add Open Scenes` をクリックして 
 
 オブジェクト名は `StartButton` に変更してください。そして、`StartButton` の Position を (0, -50, 0) に変更してください。`StartButton` の Text を `Start` に変更してください。
 
-Hierarchy で　`StartButton` の子オブジェクトに、ボタンのテキストがあります。このテキストの `Text` を `Start` に変更してください。
+Hierarchy で　`StartButton` の子オブジェクト(▶押すと見れる)に、ボタンのテキストがあります。このテキストの `Text` を `Start` に変更してください。
 
 ![StartButton](./img/10.3.1.webp)
 
@@ -762,7 +761,7 @@ Hierarchy で　`StartButton` の子オブジェクトに、ボタンのテキ�
 
 以下のようにスクリプトを書き換えてください。
 
-```csharp title="TitleManager.cs" showLineNumbers
+```diff title="TitleManager.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -779,7 +778,7 @@ public class TitleManager : MonoBehaviour
 
 Hierarchy で右クリック -> `Create Empty` を選択
 
-オブジェクト名は `TitleManager` に変更してください。そして、`TitleManager` に `TitleManager` をアタッチしてください。
+オブジェクト名は `TitleManager` に変更してください。そして、`TitleManager` オブジェクトに `TitleManager` スクリプトをアタッチしてください。
 
 ![TitleManager](./img/10.4.1.webp)
 
@@ -821,7 +820,7 @@ File -> `Build Settings` を選択し、`Add Open Scenes` をクリックして 
 
 Hierarchy で右クリック -> `UI` -> `Legacy` -> `Text` を選択
 
-オブジェクト名は `GameClear` に変更してください。そして、`GameClear` の Position を (0, 0, 0) に変更してください。`GameClear` の Text を `Game Clear` 、Font Size を 50 、Hight と Width を (300, 270) になるように調整してください。
+オブジェクト名は `GameClear` に変更してください。そして、`GameClear` の Position を (0, 0, 0) に変更してください。`GameClear` の Text を `Game Clear` 、Font Size を 50 、Width と Hight を (300, 70) になるように調整してください。
 
 ![GameClear](./img/11.1.2.webp)
 
@@ -837,7 +836,7 @@ Hierarchy で右クリック -> `UI` -> `Legacy` -> `Text` を選択
 
 以下のようにスクリプトを書き換えてください。
 
-```csharp title="GameClearManager.cs" showLineNumbers
+```diff title="GameClearManager.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -876,7 +875,7 @@ GameClear シーンから Title シーンに遷移することができました
 
 `BallController` にゲームクリアの処理を追加します。
 
-```csharp title="BallController.cs" showLineNumbers
+```diff title="BallController.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -987,7 +986,9 @@ Assets で右クリック -> `Create` -> `Material` を選択
 
 マテリアルの名前を `BallMaterial` に変更してください。
 
-`BallMaterial` を選択し、`Inspector` で `Base Map` の `Texture` に `BallTexture` をドラッグアンドドロップしてください。
+`BallMaterial` を選択し、`Inspector` で `Base Map` の左の四角いところに `BallTexture` をドラッグアンドドロップしてください。
+
+ドラッグアンドドロップしたら四角いところがテクスチャになります。
 
 ![Material](./img/12.2.1.webp)
 
@@ -1023,7 +1024,7 @@ Hierarchy で `Sphere` を選択し、`Inspector` で `Add Component` をクリ�
 
 `BallController` を開いて以下を追加してください。
 
-```csharp title="BallController.cs" showLineNumbers
+```diff title="BallController.cs" showLineNumbers
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -1034,56 +1035,57 @@ public class BallController : MonoBehaviour
 {
     private Rigidbody rb;
     private int score = 0;
-+	private AudioSource audioSource;
++	  private AudioSource audioSource;
     [SerializeField] private Text scoreText;
-+	[SerializeField] private AudioClip ScoreSound;
++	  [SerializeField] private AudioClip ScoreSound;
 
 	// Start is called before the first frame update
 	void Start()
     {
         rb = GetComponent<Rigidbody>();
-+		audioSource = GetComponent<AudioSource>();
+        scoreText.text = "Score: " + score;
++       audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKey(KeyCode.W))
-		{
-			rb.AddForce(new Vector3(0, 0, 1));
-		}
+        {
+            rb.AddForce(new Vector3(0, 0, 1));
+		    }
 
         if(Input.GetKey(KeyCode.S))
         {
             rb.AddForce(new Vector3(0, 0, -1));
-		}
-
-        if(Input.GetKey(KeyCode.A))
-		{
-			rb.AddForce(new Vector3(-1, 0, 0));
         }
 
-		if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(new Vector3(-1, 0, 0));
+        }
+
+        if(Input.GetKey(KeyCode.D))
         {
             rb.AddForce(new Vector3(1, 0, 0));
-		}
+        }
     }
 
     private void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.name == "Score(Clone)")
-		{
-			score++;
-			Debug.Log("Score: " + score);
-			Destroy(other.gameObject);
-			scoreText.text = "Score: " + score;
-+			audioSource.PlayOneShot(ScoreSound);
-			if (score == 10)
-			{
-				SceneManager.LoadScene("GameClear");
-			}
-		}
-	}
+    {
+        if (other.gameObject.name == "Score(Clone)")
+		    {
+            score++;
+            Debug.Log("Score: " + score);
+            Destroy(other.gameObject);
+            scoreText.text = "Score: " + score;
++           audioSource.PlayOneShot(ScoreSound);
+            if (score == 10)
+            {
+                SceneManager.LoadScene("GameClear");
+            }
+        }
+    }
 }
 ```
 
