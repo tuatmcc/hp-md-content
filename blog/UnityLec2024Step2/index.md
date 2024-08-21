@@ -730,7 +730,7 @@ public class UnityChanController : MonoBehaviour
 
 ## Skybox を作る
 
-`DaySkybox` を作るときのように夜の Skybox も作ります。  `/Assets/UnityChanAdventure/Materials` の中で右クリックして、`Create` -> `Material` を選択してください。名前は `NightSkybox` にしました。そして Shader を `Skybox/Procedural` に変更してください。
+`DaySkybox` を作るときのように夜の Skybox も作ります。  `/Assets/UnityChanAdventure/Materials` の中で右クリックして、`Create` -> `Material` を選択してください。名前は `NightSkybox` にしました。そして Shader を `Skybox/Panoramic` に変更してください。
 
 ![alt text](./img/13.1.1.webp)
 
