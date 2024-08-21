@@ -4,6 +4,11 @@ date: "2024-07-20"
 author: "sugawa197203"
 ---
 
+* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* 入門編 ← 今ここ
+* 応用編(制作中)
+* 発展編(制作中)
+
 # 1. はじめに
 
 * この記事は Unity 講習会 2024 入門編の資料です
@@ -648,7 +653,7 @@ public class BallController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody();
+        rb = GetComponent<Rigidbody>();
 +       scoreText.text = "Score: " + score;
     }
 
@@ -1128,3 +1133,10 @@ File -> `Build Settings` で Build Settings を開いてください。上の方
 # 15. まとめ
 
 Unity を使って、ボールを操作してスコアを取るゲームを作成しました。また、ゲームのタイトルシーンとゲームクリアシーンを作成し、シーン遷移を行いました。さらに、マテリアルを使って見た目を変更し、音を鳴らす処理を追加しました。最後に、ゲームをビルドして実行ファイルを作成しました。
+
+# MCC Unity講習会
+
+* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* 入門編 ← 今ここ
+* 応用編(制作中)
+* 発展編(制作中)

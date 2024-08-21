@@ -4,6 +4,11 @@ date: "2024-07-20"
 author: "sugawa197203"
 ---
 
+* 環境構築編 ← 今ここ
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
+* 応用編(制作中)
+* 発展編(制作中)
+
 # Unity 講習会 環境構築編
 
 Unity 講習会では、 Unity 本体と、コードエディタとして Visual Studio を使います。ここでは、そのふたつのインストールについて行います。
@@ -24,7 +29,7 @@ Unity Hub を起動して、サインインしてください。アカウント�
 
 ## Visual Studio
 
-**Mac では Visual Studio が使えないようです。Mac では vscode か Rider を推奨します。**
+**Mac では Visual Studio が使えないようです。Mac では vscode か Rider を推奨します。 Rider を使うには、[こちらの記事](https://tuatmcc.com/blog/RiderStudents/)を読んでください。**
 
 [ここから](https://visualstudio.microsoft.com/ja/downloads/)ダウンロード
 
@@ -37,3 +42,10 @@ Visual Studio Installer が起動したら、ワークロードを少しスク�
 Visual Studio がインストールされたらマイクロソフトアカウントでログインしてください。個人のアカウントでも学校のアカウントでのどっちでもOKです。
 
 ログイン出来たら Visual Studio は閉じて構いません。
+
+# MCC Unity講習会
+
+* 環境構築編 ← 今ここ
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
+* 応用編(制作中)
+* 発展編(制作中)
