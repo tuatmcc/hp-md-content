@@ -4,6 +4,11 @@ date: "2024-08-21"
 author: "sugawa197203"
 ---
 
+* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
+* 応用編 ← 今ここ
+* 発展編(制作中)
+
 # 1. はじめに
 
 * この記事は Unity 講習会 2024 応用編の資料です
@@ -833,3 +838,11 @@ Depth Of Field は、焦点を合わせることで、前後のオブジェク�
 # 15. まとめ
 
 とりあえず一旦ここで終わりにします。今回は、Unityちゃんを操作できるようにし、ステージを作り、家を置き、カメラを設定し、空を作り、夜にする、Post Processing を設定しました。Unity は、とても広い機能を持っているので、まだまだいろいろなことができます。続きは発展編でやります！
+
+# MCC Unity講習会
+
+
+* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
+* 応用編 ← 今ここ
+* 発展編(制作中)
