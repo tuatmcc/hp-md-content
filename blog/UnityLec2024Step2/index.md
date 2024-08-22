@@ -459,7 +459,7 @@ Terrain では、地形を作るときと同じように、塗るようにして
 
 ![alt text](./img/10.2.7.png)
 
-`treered` プレハブの `Mesh Renderer` の `Materials` の `Leef` を `/Assets/UnityChanAdventure/Models/Tree` の中にある `RedLeef` に変更してください。`treeyellow` プレハブも同様に `Leef` を `/Assets/UnityChanAdventure/Models/Tree` に変更してください。
+`treered` プレハブの `Mesh Renderer` の `Materials` の `Leef` を `/Assets/UnityChanAdventure/Models/Tree` の中にある `RedLeef` に変更してください。`treeyellow` プレハブも同様に `Leef` を `/Assets/UnityChanAdventure/Models/Tree` の中にある `YellowLeef` に変更してください。
 
 ![alt text](./img/10.2.8.webp)
 
