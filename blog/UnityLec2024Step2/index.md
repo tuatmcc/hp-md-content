@@ -4,6 +4,11 @@ date: "2024-08-21"
 author: "sugawa197203"
 ---
 
+* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
+* 応用編 ← 今ここ
+* 発展編(制作中)
+
 # 1. はじめに
 
 * この記事は Unity 講習会 2024 応用編の資料です
@@ -28,14 +33,6 @@ Unityちゃんアドベンチャーゲーム
 * Terrain
 * Skybox
 * PostProcessing
-
-## 1.3. ゲーム仕様
-
-Unityちゃんが障害物を避けながらアイテムを回収してくるゲーム
-
-応用編、発展編に2回にわたって作ります。
-
-HP が 0 になるとゲームオーバー
 
 # 2. プロジェクトを作る
 
@@ -462,7 +459,7 @@ Terrain では、地形を作るときと同じように、塗るようにして
 
 ![alt text](./img/10.2.7.png)
 
-`treered` プレハブの `Mesh Renderer` の `Materials` の `Leef` を `/Assets/UnityChanAdventure/Models/Tree` の中にある `RedLeef` に変更してください。`treeyellow` プレハブも同様に `Leef` を `/Assets/UnityChanAdventure/Models/Tree` に変更してください。
+`treered` プレハブの `Mesh Renderer` の `Materials` の `Leef` を `/Assets/UnityChanAdventure/Models/Tree` の中にある `RedLeef` に変更してください。`treeyellow` プレハブも同様に `Leef` を `/Assets/UnityChanAdventure/Models/Tree` の中にある `YellowLeef` に変更してください。
 
 ![alt text](./img/10.2.8.webp)
 
@@ -542,7 +539,7 @@ Terrain では、地形を作るときと同じように、塗るようにして
 
 ![alt text](./img/12.2.1.png)
 
-家を平らな場所に置いたら、以下の画像のようにカメラを動かしたら色がパタパタしてる感じになると思います。これは同じ場所に同じオブジェクトがあるときに起こる [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting) という現象です。対処法はどちらかのオブジェクトをほんのちょっとだけずらすことです。ヒエラルキーの `House` を選択して、`Transform` の `Position` の `Z` を今の座標から `0.0001` ほど上げてみましょう(以下の画像では最初は `0` で対処したら `0.0001` に変更しています)。
+家を平らな場所に置いたら、以下の画像のようにカメラを動かしたら色がパタパタしてる感じになると思います。これは同じ場所に同じオブジェクトがあるときに起こる [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting) という現象です。対処法はどちらかのオブジェクトをほんのちょっとだけずらすことです。ヒエラルキーの `House` を選択して、`Transform` の `Position` の `Y` を今の座標から `0.0001` ほど上げてみましょう(以下の画像では最初は `0` で対処したら `0.0001` に変更しています)。
 
 ![alt text](./img/12.2.2.png)
 
@@ -733,7 +730,7 @@ public class UnityChanController : MonoBehaviour
 
 ## Skybox を作る
 
-`DaySkybox` を作るときのように夜の Skybox も作ります。  `/Assets/UnityChanAdventure/Materials` の中で右クリックして、`Create` -> `Material` を選択してください。名前は `NightSkybox` にしました。そして Shader を `Skybox/Procedural` に変更してください。
+`DaySkybox` を作るときのように夜の Skybox も作ります。  `/Assets/UnityChanAdventure/Materials` の中で右クリックして、`Create` -> `Material` を選択してください。名前は `NightSkybox` にしました。そして Shader を `Skybox/Panoramic` に変更してください。
 
 ![alt text](./img/13.1.1.webp)
 
@@ -841,3 +838,11 @@ Depth Of Field は、焦点を合わせることで、前後のオブジェク�
 # 15. まとめ
 
 とりあえず一旦ここで終わりにします。今回は、Unityちゃんを操作できるようにし、ステージを作り、家を置き、カメラを設定し、空を作り、夜にする、Post Processing を設定しました。Unity は、とても広い機能を持っているので、まだまだいろいろなことができます。続きは発展編でやります！
+
+# MCC Unity講習会
+
+
+* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
+* 応用編 ← 今ここ
+* 発展編(制作中)
