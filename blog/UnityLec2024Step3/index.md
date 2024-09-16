@@ -12,6 +12,7 @@ author: "sugawa197203"
 # 1. はじめに
 
 * この記事は Unity 講習会 2024 発展編の資料です
+* [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/) と [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/) を終えた人向けの内容です
 * Unity Hub と Unity 2022.3.38f1 をインストール済み(※ 2022.3.38f1 はあくまで例)
 * 任意の IDE がある(Visual studio, Rider など)
 * Unity ちょっと触ったことがある人
