@@ -49,13 +49,11 @@ Unityちゃんアドベンチャーゲーム
 
 ![alt text](./img/2.transconfig.webp)
 
-`Jump00B -> Move` への `Conditions` には `speed` で `0.1` 以上を設定してください。
+`Jump00B -> Move` への `Conditions` には `speed` で `0.1` **以上**を設定してください。
 
 ![alt text](./img/2.jump2move.webp)
 
-`Jump00B -> Idle` への `Conditions` には `speed` で `0.1` 未満を設定してください。
-
-![alt text](./img/2.jump2idle.webp)
+同じようにして、 `Jump00B -> Idle` への `Conditions` には `speed` で `0.1` **未満**を設定してください。
 
 ## 2.2. ジャンプをスペースキーで発動させる
 
@@ -500,7 +498,7 @@ public class ScoreManagerInstaller : MonoInstaller
 }
 ```
 
-`Main` シーンを開いて、 ヒエラルキー上で右クリックし、 Zenject -> Scene Context を選択してください。すると、シーン上に `SceneContext` が生成されます。
+`Main` シーンを開いて、 ヒエラルキー上で右クリックし、 Zenject -> Scene Context を選択してください。すると、シーン上に `SceneContext` が生成されます。 Resultシーンにも同じよにして `SceneContext` を生成してください。
 
 ![alt text](./img/4.context.webp)
 
@@ -512,7 +510,7 @@ public class ScoreManagerInstaller : MonoInstaller
 
 ![alt text](./img/4.installer.webp)
 
-## 4.6. UNity ちゃんがアイテムに触れたらスコアが加算されるようにする
+## 4.6. Unity ちゃんがアイテムに触れたらスコアが加算されるようにする
 
 /UnityChanADventure/Scripts の中の `UnityChanController.cs` の OnTriggerEnter でアイテムに触れたら、 `ICollectable` インターフェースの `Collect` メソッドを呼び出します。これで、Unity ちゃんがアイテムに触れたら、スコアが加算されるようになります。
 
@@ -613,6 +611,8 @@ public class UnityChanController : MonoBehaviour
 
 ## 4.7. リザルトシーン
 
+メダルをすべて回収したら、リザルトシーンに遷移するようにします。
+
 /UnityChanAdventure/Scenes/ の中に `Result` シーンを作成してください。そして、 `Result` シーンを開いてください。
 
 ![alt text](./img/4.createscene.webp)
@@ -674,6 +674,42 @@ public class ResultManager : MonoBehaviour
 `Result` シーンを Build Setting に登録します。 File -> Build Settings を開いて、 `Add Open Scenes` を押してください。そうすれば、 `Result` シーンが登録されます。
 
 ![alt text](./img/4.addscene.webp)
+W
+`ScoreManagerImpl` にシーンを遷移する処理を付け足します。`AddScore` 関数内で、 `scoreItems.Count == 0` になったら、 `SceneManager.LoadScene("Result");` でリザルトシーンに遷移します。
+    
+```diff title="ScoreManagerImpl.cs"
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ScoreManagerImpl : IScoreManager
+{
+    private int score = 0;
+    private List<ScoreItem> scoreItems = new List<ScoreItem>();
+
+    public void AddScore(ScoreItem scoreItem)
+    {
+        score += scoreItem.GetScore();
+        scoreItems.Remove(scoreItem);
+        Debug.Log("Score: " + score);
+        
++       if (scoreItems.Count == 0)
++       {
++           SceneManager.LoadScene("Result");
++       }
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public void RegisterScoreItem(ScoreItem scoreItem)
+    {
+        scoreItems.Add(scoreItem);
+    }
+}
+```
 
 `Main` シーンを開いて、再生して確認してみましょう。
 
