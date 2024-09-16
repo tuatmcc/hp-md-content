@@ -7,7 +7,7 @@ author: "sugawa197203"
 * [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
 * 入門編 ← 今ここ
 * [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/)
-* 発展編(制作中)
+* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)
 
 # 1. はじめに
 
@@ -1139,4 +1139,4 @@ Unity を使って、ボールを操作してスコアを取るゲームを作�
 * [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
 * 入門編 ← 今ここ
 * [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/)
-* 発展編(制作中)
+* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)

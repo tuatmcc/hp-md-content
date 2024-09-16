@@ -7,7 +7,7 @@ author: "sugawa197203"
 * [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
 * [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
 * 応用編 ← 今ここ
-* 発展編(制作中)
+* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)
 
 # 1. はじめに
 
@@ -845,4 +845,4 @@ Depth Of Field は、焦点を合わせることで、前後のオブジェク�
 * [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
 * [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
 * 応用編 ← 今ここ
-* 発展編(制作中)
+* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)

@@ -7,7 +7,7 @@ author: "sugawa197203"
 * 環境構築編 ← 今ここ
 * [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
 * [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/)
-* 発展編(制作中)
+* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)
 
 # Unity 講習会 環境構築編
 
@@ -48,4 +48,4 @@ Visual Studio がインストールされたらマイクロソフトアカウン
 * 環境構築編 ← 今ここ
 * [入門編](https://tuatmcc.com/blog/UnityLec2024Step1/)
 * [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/)
-* 発展編(制作中)
+* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)
