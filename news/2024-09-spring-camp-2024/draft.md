@@ -35,6 +35,8 @@ date: 2024-09-28
 
 ![1000001228](https://github.com/user-attachments/assets/91df687c-a889-4d96-a751-4bf9309d3266)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VTkFJJxP_os?si=xhCuayJLu3iqKFyt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### B班: MCC FIGHTER
 
@@ -51,6 +53,12 @@ Unityで2人対戦用の格闘ゲームを作りました．手札のカード�
 ## D班: 節約可視化アプリ(仮)
 
 日常生活で行った割引などの節約を管理していくらかを可視化するWebアプリです。
+
+## E班: ポージャン
+
+麻雀とポーカーを組み合わせたトランプゲームを作りました．麻雀のように手札を入れ替えて，ポーカーの役を作って点数を競います．PixiJSとPartyKitを使用したWebアプリで，4人でのオンライン対戦が可能です．
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-6qSr8tLdRY?si=LfvAhhoUP5Sh239n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## F班:ダンソンダンソンレボリューション
 
