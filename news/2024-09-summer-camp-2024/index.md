@@ -16,17 +16,17 @@ tags: ['dev']
 
 ### 概要
 
-場所: サンセットブリーズ保田(千葉県)
-日程: 9/26~9/28
-人数: 32人
+- 場所: サンセットブリーズ保田(千葉県)
+- 日程: 9/26~9/28
+- 人数: 32人
 
 農工大が契約している合宿施設を利用しています。
 
 ## スケジュール
 
-1日目: チーム分け&アイデア出し、競プロ部内コンテスト(Algorithm)、BBQなど
-2日目: 開発、競プロ部内コンテスト(Heuristic)
-3日目: 開発、成果発表
+- 1日目: チーム分け&アイデア出し、競プロ部内コンテスト(Algorithm)、BBQなど
+- 2日目: 開発、競プロ部内コンテスト(Heuristic)
+- 3日目: 開発、成果発表
 
 ## ハッカソン各チームの制作物紹介
 
@@ -36,7 +36,7 @@ tags: ['dev']
 
 ![1000001228](https://github.com/user-attachments/assets/91df687c-a889-4d96-a751-4bf9309d3266)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VTkFJJxP_os?si=xhCuayJLu3iqKFyt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/VTkFJJxP_os?si=xhCuayJLu3iqKFyt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ### B班: MCC FIGHTER
@@ -59,7 +59,7 @@ Unityで2人対戦用の格闘ゲームを作りました．手札のカード�
 
 麻雀とポーカーを組み合わせたトランプゲームを作りました．麻雀のように手札を入れ替えて，ポーカーの役を作って点数を競います．PixiJSとPartyKitを使用したWebアプリで，4人でのオンライン対戦が可能です．
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-6qSr8tLdRY?si=LfvAhhoUP5Sh239n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/-6qSr8tLdRY?si=LfvAhhoUP5Sh239n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## F班:ダンソンダンソンレボリューション
 
