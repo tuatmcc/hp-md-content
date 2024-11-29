@@ -2,6 +2,7 @@
 title: MCC夏合宿2024を実施しました
 date: "2024-09-28"
 tags: ['dev']
+img: "./img.jpg"
 ---
 
 # MCC夏合宿20242を実施しました
