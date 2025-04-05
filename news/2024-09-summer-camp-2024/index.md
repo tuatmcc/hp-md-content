@@ -44,6 +44,8 @@ img: "./img.jpg"
 Unityで2人対戦用の格闘ゲームを作りました．手札のカードを使用して対応する技を繰り出せるほか，複数のカードを組み合わせるとコンボ攻撃を発動できます．
 プロトコルを自作し、UDP通信でやり取りすることで同期しています．
 
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/-6qSr8tLdRY?si=LfvAhhoUP5Sh239n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### C班: ガウシアンスプラッティングツール
 
 動画をサーバーにアップロードすると、その動画を元にガウシアンスプラッティング生成されます。そして手元のWeb環境で見れます。VR/AR対応なのでスマホやAVゴーグルでも見れます。
@@ -59,7 +61,7 @@ Unityで2人対戦用の格闘ゲームを作りました．手札のカード�
 
 麻雀とポーカーを組み合わせたトランプゲームを作りました．麻雀のように手札を入れ替えて，ポーカーの役を作って点数を競います．PixiJSとPartyKitを使用したWebアプリで，4人でのオンライン対戦が可能です．
 
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/-6qSr8tLdRY?si=LfvAhhoUP5Sh239n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ### F班:ダンソンダンソンレボリューション
 
