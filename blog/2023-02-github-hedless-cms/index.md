@@ -4,8 +4,6 @@ date: "2023-02-19"
 description: "GitHubだけでヘッドレスCMS(?)を再現しようとした話。"
 tags: [dev, nextjs, jamstack]
 author: ojii3
-img: "https://user-images.githubusercontent.com/84656786/224326027-5ec479f6-893e-4820-9114-f3c47c8ab773.png"
-
 ---
 
 
@@ -21,7 +19,7 @@ img: "https://user-images.githubusercontent.com/84656786/224326027-5ec479f6-893e
 
 # 前提
 
-- Next.js13でSSGして使う。(バックエンドなし)
+- Next.js13でSSGで使う。(バックエンドなし)
 - GitHub Actionsでデプロイする。
 
 # ヘッドレスCMSとは

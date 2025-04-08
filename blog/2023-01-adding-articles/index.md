@@ -4,7 +4,7 @@ description: "Markdown記事をホームページに追加する方法を説明�
 date: "2023-01-05"
 tags: ["web", "dev"]
 author: ojii3
-img: "https://user-images.githubusercontent.com/84656786/219551946-1b80cbaa-7e2f-47be-a99c-ed9a1a615947.png"
+img: "./markdown.png"
 ---
 
 # 手順

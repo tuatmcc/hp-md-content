@@ -3,7 +3,7 @@ title: "Discord Bot チュートリアル"
 description: "Discord Bot の開発チュートリアルを行いました。"
 date: "2022-03-16"
 tags: ["dev"]
-img: "/abstract-tech-image-1.webp"
+img: "./discordjs-logo.svg"
 ---
 
 # Discord Bot チュートリアル
