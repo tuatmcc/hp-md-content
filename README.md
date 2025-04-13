@@ -1,5 +1,3 @@
-[![GitHub Workflow Build Status](https://img.shields.io/github/actions/workflow/status/tuatmcc/homepage2.0/nextjs.yml?&style=flat-square)](https://github.com/tuatmcc/homepage2.0/actions/workflows/nextjs.yml)
-
 # Homepage Markdown Content
 
 [ホームページ](https://www.tuatmcc.com)に載せるためのマークダウン記事を置いておくリポジトリです。
