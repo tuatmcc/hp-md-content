@@ -1,10 +1,11 @@
 ---
 title: MCC C言語部内講習会 第3回
+date: 2023-05-26
+author: sugawa197203
+tags:
+  - dev
 description: MCC C言語部内講習会 第3回 を行いました。
-date: "2023-05-26"
-tags: [dev]
 ---
-
 # MCC C 言語部内講習会 第 3 回
 
 ## この講座の対象の人
@@ -91,14 +92,15 @@ int main() {
 ```
 
 ![malloc関数](./2.png "malloc関数")
+
 上の例において、`int*` 型の変数 `arr` は int `3` 要素分のメモリを持っています。`sizeof`は sizeof 演算子と言い、データ型の大きさを求める演算子です。ここでは int の大きさを求めています。以下に型のサイズの例を示します。`arr` の長さ（サイズ）は `3` (4 × 3 = 12byte)で要素数 3 の int 型配列と同じように扱えます。`malloc`関数は乱用ポインタ(`void*`)を返すので`int*`にキャスト(型変換)してください。
 
-| type  | ex.           | result |
-| ----- | ------------- | :----: |
-| char  | sizeof(char)  |   1    |
-| short | sizeof(short) |   2    |
-| int   | sizeof(int)   |   4    |
-| long  | sizeof(long)  |   8    |
+| type | ex. | result |
+| --- | --- | --- |
+| char | sizeof(char) | 1 |
+| short | sizeof(short) | 2 |
+| int | sizeof(int) | 4 |
+| long | sizeof(long) | 8 |
 
 次のようにして、ユーザーの入力分だけのメモリを確保することも可能です。コンソールで 10 と入力すれば n に 10 が入り、arr は要素数 10 の int 型配列になります。
 
