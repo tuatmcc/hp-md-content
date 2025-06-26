@@ -1,12 +1,13 @@
 ---
-title: "記事の書き方"
-description: "Markdown記事をホームページに追加する方法を説明します。"
-date: "2023-01-05"
-tags: ["web", "dev"]
+title: 記事の書き方
+date: 2023-01-05
 author: ojii3
-img: "./markdown.png"
+tags:
+  - web
+  - dev
+img: ./markdown.png
+description: Markdown記事をホームページに追加する方法を説明します。
 ---
-
 # 手順
 
 [記事管理用リポジトリ](https://github.com/tuatmcc/hp-md-content) を更新することがメイン工程となります。
@@ -27,7 +28,8 @@ MCC からのお知らせ記事(活動報告も含む)は、`news`フォルダ�
 
 記事の先頭に以下のような記述が必要です。(Frontmatter)
 
-```markdown title="blog/bocchi-the-rock/index.md"
+```markdown
+title="blog/bocchi-the-rock/index.md"
 ---
 title: "ぼっち・ざ・ろっくを鑑賞しました"
 img: "./bocchi-the-rock.webp"
@@ -77,7 +79,7 @@ author: "Goto Hitori"
 
 ## これは h2 の見出しです
 
-### h3~は文字サイズが徐々に小さくなるだけです。h6 まで
+### h3\~は文字サイズが徐々に小さくなるだけです。h6 まで
 
 ## リスト
 
@@ -95,8 +97,8 @@ author: "Goto Hitori"
 
 - リスト１
 - リスト２
-  - リスト 2-1
-  - リスト 2-2
+- リスト 2-1
+- リスト 2-2
 
 1. 番号付きリスト 1
 2. 番号付きリスト 2
@@ -200,9 +202,9 @@ _Italic 斜体_
 | これは表です | 2022 | web, dev |
 ```
 
-| title        | date | tags     |
-| ------------ | ---- | -------- |
-| こんにちは   | 2022 | web, dev |
+| title | date | tags |
+| --- | --- | --- |
+| こんにちは | 2022 | web, dev |
 | これは表です | 2022 | web, dev |
 
 ## 引用
@@ -216,9 +218,9 @@ _Italic 斜体_
 ```
 
 > 引用です。
->
+> >
 > > 引用の中の引用です。
->
+> >
 > That's all.
 
 ## インラインコード
@@ -227,28 +229,37 @@ _Italic 斜体_
 `これはインラインコードです` `Font は JetBrains Monoを使用` `` コード内で"`"を使うには、"`"を一個追加してはさみます ``
 ```
 
-`これはインラインコードです` `Font は JetBrains Monoを使用` `` コード内で"`"を使うには、"`"を一個追加してはさみます ``
+`これはインラインコードです` `Font は JetBrains Monoを使用` `` コード内で"`"を使うには、"\`"を一個追加してはさみます \`\`
 
 ## コードブロック
 
 タイトル(ファイル名)はあってもなくてもいけます。タイトルのみ書くことはできません。
 
-````markdown title="markdown"
-```python title="blog.py"
-print('Hello World')
 ```
-`````
-
+`markdown title="markdown"
 ```python title="blog.py"
 print('Hello World')
 ```
 
-````markdown title="markdown"
+```
+undefined
+```
+
+```python
+title="blog.py"
+print('Hello World')
+```
+
+```
+`markdown title="markdown"
 ```diff
 - これは削除です
 + これは追加です
 ```
-````
+
+```
+undefined
+```
 
 ```diff
 - これは削除です
@@ -259,7 +270,6 @@ print('Hello World')
 
 ## 数式
 
-
 ```math
 $\KaTeX$ を使用しています。
 
@@ -267,10 +277,11 @@ $$
 L = \frac{1}{2} \rho v^2 S C_L
 $$
 ```
-$\KaTeX$ を使用しています。
+
+$\\KaTeX$ を使用しています。
 
 $$
-L = \frac{1}{2} \rho v^2 S C_L
+L = \\frac{1}{2} \\rho v^2 S C_L
 $$
 
 ## Emoji
