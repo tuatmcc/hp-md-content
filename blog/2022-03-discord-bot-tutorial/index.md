@@ -1,11 +1,12 @@
 ---
-title: "Discord Bot チュートリアル"
-description: "Discord Bot の開発チュートリアルを行いました。"
-date: "2022-03-16"
-tags: ["dev"]
-img: "./discordjs-logo.svg"
+title: Discord Bot チュートリアル
+date: 2022-03-16
+author: a4rcvv
+tags:
+  - dev
+img: ./discordjs-logo.svg
+description: Discord Bot の開発チュートリアルを行いました。
 ---
-
 # Discord Bot チュートリアル
 
 こんにちは。B3 の Arc です。2022 年 2 月 18 日に部内で Discord Bot の開発チュートリアルを行いました。当時の資料を元に加筆・修正を加えた物を公開してみます。
