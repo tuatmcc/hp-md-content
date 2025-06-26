@@ -1,10 +1,10 @@
 ---
-title: "Arch Linuxで学内LAN(tuatnet)に接続する"
-date: "2023-01-07"
-tags: [btw]
-author: "vm-xeck"
+title: Arch Linuxで学内LAN(tuatnet)に接続する
+date: 2023-01-07
+author: vm-xeck
+tags:
+  - btw
 ---
-
 ## 概要
 
 Arch Linux で，wpa_supplicant と systemd を用いて tuatnet に接続する方法を説明します
@@ -27,11 +27,11 @@ Arch ｲﾝｽｺしたけど tuatnet に繋がらないよーって人
 
 - systemd は入ってるはずなのでそのまま
 - wpa_supplicant をインストール
-  - 任意で wpa_supplicant_gui(AUR)もインストール
+- 任意で wpa_supplicant_gui(AUR)もインストール
 - iwd が入ってる場合はアンインストール
 - NetworkManager 系が入ってる場合はアンインストール
-  - 無効化だけでもいいです
-  - systemd の替わりに NM を使うこともできますが，ここでは解説しません
+- 無効化だけでもいいです
+- systemd の替わりに NM を使うこともできますが，ここでは解説しません
 
 ## 知識？
 
@@ -63,7 +63,8 @@ $ ip link
 **以下，`wlp2s0`は自分の無線ネットワークインターフェイス名に置き換えてください．**
 Arch Wiki でいうと[ここ](https://wiki.archlinux.jp/index.php/Systemd-networkd#.E7.84.A1.E7.B7.9A.E3.82.A2.E3.83.80.E3.83.97.E3.82.BF)です．
 
-```systemd title="25-wireless.network"
+```systemd
+title="25-wireless.network"
 [Match]
 Name=wlp2s0
 
@@ -84,7 +85,8 @@ $ sudo systemctl enable --now systemd-networkd
 接続には wpa_cli を使用します(他のでもいいと思います)．
 `/etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf`を編集し，次のように書きます．
 
-```systemd title="wpa_supplicant-wlp2s0.conf"
+```systemd
+title="wpa_supplicant-wlp2s0.conf"
 ctrl_interface=/run/wpa_supplicant
 update_config=1
 ```
@@ -127,7 +129,8 @@ $ sudo wpa_cli
 次の内容を追記します．
 Arch Wiki の[この部分](https://wiki.archlinux.jp/index.php/Wpa_supplicant#802.1x.2Fradius)です．
 
-```systemd title="wpa_supplicant-wlp2s0.conf"
+```systemd
+title="wpa_supplicant-wlp2s0.conf"
 network={
     ssid="tuatnet"
     key_mgmt=WPA-EAP
