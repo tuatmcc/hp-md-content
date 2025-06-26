@@ -2,7 +2,6 @@
 title: MCCMMANCC2021を行いました
 date: 2021-12-15
 thumbnail: mccmmancc2021.webp
-img: ./mccmmancc2021.webp
 description: Learning how to use @nuxt/content to create a blog
 tags:
   - dev
