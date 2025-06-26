@@ -2,6 +2,7 @@
 title: CpawCTF Write Up
 date: 2024-04-24
 author: sugawa197203
+draft: false
 ---
 # はじめに
 

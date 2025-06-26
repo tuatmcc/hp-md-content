@@ -3,6 +3,7 @@ title: 2022年度春合宿を行いました
 date: 2023-03-18
 img: ./camp-2.jpeg
 description: 2022年度春合宿を行い、2泊3日でハッカソンや観光をしました
+draft: false
 ---
 # 概要
 

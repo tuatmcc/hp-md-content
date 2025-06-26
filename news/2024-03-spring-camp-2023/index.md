@@ -2,6 +2,7 @@
 title: 2023年度春合宿を行いました
 date: 2024-03-26
 img: ./img.webp
+draft: false
 ---
 # 2023年度春合宿を行いました
 

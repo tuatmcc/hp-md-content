@@ -2,6 +2,7 @@
 title: "Unity 講習会 2024 環境構築"
 date: "2024-07-20"
 author: "sugawa197203"
+draft: false
 ---
 
 * 環境構築編 ← 今ここ

@@ -2,6 +2,7 @@
 title: "Riderの無料学生ライセンスを使う"
 date: "2024-08-07"
 author: "cocoisbored"
+draft: false
 ---
 
 # 1. はじめに

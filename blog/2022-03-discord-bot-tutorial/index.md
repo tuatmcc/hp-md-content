@@ -6,6 +6,7 @@ tags:
   - dev
 img: ./discordjs-logo.svg
 description: Discord Bot の開発チュートリアルを行いました。
+draft: false
 ---
 # Discord Bot チュートリアル
 

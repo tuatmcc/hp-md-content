@@ -7,6 +7,7 @@ tags:
   - nextjs
   - jamstack
 description: GitHubだけでヘッドレスCMS(?)を再現しようとした話。
+draft: false
 ---
 これはヘッドレスCMSとは呼ばないのでは…
 

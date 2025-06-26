@@ -5,6 +5,7 @@ author: sugawa197203
 tags:
   - dev
 description: MCC C言語部内講習会 第3回 を行いました。
+draft: false
 ---
 # MCC C 言語部内講習会 第 3 回
 

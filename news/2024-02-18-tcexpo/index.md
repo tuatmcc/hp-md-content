@@ -1,6 +1,7 @@
 ---
 title: Tech Circle Expo#1 に参加しました
 date: 2024-02-18
+draft: false
 ---
 # Tech Circle Expo に参加しました
 

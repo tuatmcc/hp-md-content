@@ -4,6 +4,7 @@ date: 2022-03-16
 description: 部室の入室管理システムをnode.jsで作るをテーマに講習しました
 tags:
   - dev
+draft: false
 ---
 ## 部内勉強会を行いました
 

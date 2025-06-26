@@ -3,6 +3,7 @@ title: MCC夏合宿2024を実施しました
 date: 2024-09-28
 thumbnail: img.jpg
 img: ./img.jpg
+draft: false
 ---
 # MCC夏合宿20242を実施しました
 

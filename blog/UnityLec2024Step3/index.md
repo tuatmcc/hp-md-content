@@ -2,6 +2,7 @@
 title: "Unity 講習会 2024 発展編"
 date: "2024-09-11"
 author: "sugawa197203"
+draft: false
 ---
 
 * [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)

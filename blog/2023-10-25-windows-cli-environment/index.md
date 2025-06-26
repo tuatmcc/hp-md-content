@@ -2,6 +2,7 @@
 title: 部室PC荒らし行為まとめ
 date: 2023-10-30
 author: ojii3
+draft: false
 ---
 環境構築の鬼に、俺はなる！
 
