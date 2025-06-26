@@ -1,6 +1,6 @@
 ---
 title: 部室PC荒らし行為まとめ
-date: "2023-10-30"
+date: 2023-10-30
 author: ojii3
 ---
 環境構築の鬼に、俺はなる！
@@ -38,7 +38,6 @@ scoop install 〇〇
 
 # 事前準備
 
-
 - PowerShell 7
 - Windowsターミナル
 - Git for Windows
@@ -48,7 +47,7 @@ scoop install 〇〇
 
 ## PowerShell 7
 
-PowerShell 7はクロスプラットフォームな最新のPowerShell (≠Windows PowerShell)。wingetで。PowerShellが起動時に読み込む設定はDocument\PowerShell\Microsoft.PowerShell_profile.ps1に書きます。
+PowerShell 7はクロスプラットフォームな最新のPowerShell (≠Windows PowerShell)。wingetで。PowerShellが起動時に読み込む設定はDocument\\PowerShell\\Microsoft.PowerShell_profile.ps1に書きます。
 
 ## Windows Terminal
 
@@ -91,7 +90,6 @@ irm get.scoop.sh | iex
 
 ryeとdenoはscoopで入れる。Visual C++ は Visual Studio Installerで。それ以外はwinget。Node.jsを開発用途で使う人は気合いでnodenvから入れるべし。
 
-
 # TUI
 
 - yazi
@@ -103,13 +101,11 @@ yaziはファイラ。エクスプローラーなしでターミナル住むな�
 
 Neovimはターミナル内で起動するエディタ。あとで設定してVSCodeくらい高機能にする。
 
-
 # リッチな見た目
 
 - starship
 
 シェルのプロンプト(ユーザやカレントディレクトリが表示されるところ)をリッチにする。starshipのデフォルトでもgitのbranchや実行環境のバージョンがわかる様になったりと、大変良い。NerdFont使用。
-
 
 # その他CLI
 
@@ -148,13 +144,11 @@ unarはunarchiverの略で、(圧縮)ファイル解凍ツール。zipだろう�
 
 つらいところ。あとで書く。
 
-
 # その他の荒らし行為
 
 - Windows10からWindows11にアップグレードした。
 - デスクトップやタスクバーのものを消した(自重して一部は残した)。
 - Weztermを入れてデフォルトでwslのbashが起動する様にした。
 - Chrome拡張にVimiumを入れた。
-
 
 余裕があったら少しずつ追記・変更するかも。
