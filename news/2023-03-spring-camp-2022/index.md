@@ -1,17 +1,18 @@
 ---
 title: 2022年度春合宿を行いました
-description: "2022年度春合宿を行い、2泊3日でハッカソンや観光をしました"
-date: "2023-03-18"
-img: "./camp-2.jpeg"
+date: 2023-03-18
+img: ./camp-2.jpeg
+description: 2022年度春合宿を行い、2泊3日でハッカソンや観光をしました
 ---
-
 # 概要
 
 上郷・森の家にて2泊3日の合宿を行いました！
 9人が参加し、観光🛥️・バーベキュー🍖・ハッカソン💻などをしました。
 
 ![image](./camp-1.jpeg)
+
 ![image](./camp-2.jpeg)
+
 ![image](./camp-3.jpeg)
 
 # ハッカソン
@@ -19,17 +20,18 @@ img: "./camp-2.jpeg"
 ハッカソンでは参加者が3人ずつの3人チームに分かれ、
 それぞれのテーマに沿って開発を行いました。各チームが制作したものを紹介します。
 
-## Aチーム: Brainf**k CPU
+## Aチーム: Brainf\*\*k CPU
 
-Brainf**k のコードをそのまま実行できる CPU
-
+Brainf\*\*k のコードをそのまま実行できる CPU
 
 16bit の PC とポインタを備えています。
 
 Chisel 製で、FPGAやシミュレータを用いて動かすことができます。
 
 ![image](./a-team-1.webp)
+
 ![image](./a-team-2.webp)
+
 ![image](./a-team-3.webp)
 
 ## Bチーム
@@ -54,6 +56,5 @@ Unity上の仮想的な距離センサなどの情報をもとに、障害物を
 Azure Kinect を利用し、リアルタイムで現実の地形を仮想空間に取り込むこともできます。
 
 ![image](./c-team-1.webp)
+
 ![image](./c-team-2.webp)
-
-
