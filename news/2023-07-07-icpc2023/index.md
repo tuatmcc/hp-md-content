@@ -1,9 +1,8 @@
 ---
 title: ICPC2023 に出場しました
+date: 2023-07-07
 description: ICPC2023 に出場しました。
-date: "2023-07-07"
 ---
-
 # ICPC2023 に出場しました
 
 ICPCお疲れ様でした！
