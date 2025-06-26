@@ -1,12 +1,13 @@
 ---
-title: "GitHubだけでヘッドレスCMSを再現しよう！"
-date: "2023-02-19"
-description: "GitHubだけでヘッドレスCMS(?)を再現しようとした話。"
-tags: [dev, nextjs, jamstack]
+title: GitHubだけでヘッドレスCMSを再現しよう！
+date: 2023-02-19
 author: ojii3
+tags:
+  - dev
+  - nextjs
+  - jamstack
+description: GitHubだけでヘッドレスCMS(?)を再現しようとした話。
 ---
-
-
 これはヘッドレスCMSとは呼ばないのでは…
 
 # はじめに
@@ -83,20 +84,23 @@ GitHubのリポジトリからデータ取得するAPIなんてあるのか？�
 
 まず、リポジトリを`content`ディレクトリにクローンする下記ファイルを作成します。
 
-```shell title="src/prebulid.sh"
+```shell
+title="src/prebulid.sh"
 rm -rf content
 git clone --depth 1 https://github.com/organization-name/CMS用gitリポジトリ.git content
 ```
 
 次に、`package.json`を編集します。
 
-```diff title="package.json"
+```diff
+title="package.json"
 ...
   "scripts": {
 +   "prebuild": "bash ./src/prebuild.sh",
     "build": "next build",
 ...
 ```
+
 `npm-scripts`の機能で、`npm run build`で`build`の実行をすると、先に`prebuild`が実行されます。これで、ビルド直前にデータを取得できますね。
 
 # マークダウン変換処理
