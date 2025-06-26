@@ -1,10 +1,11 @@
 ---
-title: "MCC C言語部内講習会 第2回"
-description: "MCC C言語部内講習会 第2回 を行いました。"
-date: "2023-05-26"
-tags: ["dev"]
+title: MCC C言語部内講習会 第2回
+date: 2023-05-26
+author: sugawa197203
+tags:
+  - dev
+description: MCC C言語部内講習会 第2回 を行いました。
 ---
-
 # MCC C 言語部内講習会 第 2 回
 
 ## この講座の対象の人
@@ -34,18 +35,18 @@ tags: ["dev"]
 byte 数が大きくなると略したりします。
 1024byte で 1Kbyte(キロバイト)、1024Kbyte は 1Mbyte(メガバイト)、1024Mbyte で 1Gbyte(ギガバイト)、1024Gbyte で 1Tbyte(テラ)という風に略します。
 
-| 接頭語        | 記号 |   byte |
-| :------------ | :--: | -----: |
-| クエタ quetta |  Q   | 1Qbyte |
-| ロナ ronna    |  R   | 1Rbyte |
-| ヨタ yotta    |  Y   | 1Ybyte |
-| ゼタ zetta    |  Z   | 1Zbyte |
-| エクサ exa    |  E   | 1Ebyte |
-| ペタ peta     |  P   | 1Pbyte |
-| テラ tera     |  T   | 1Tbyte |
-| ギガ giga     |  G   | 1Gbyte |
-| メガ mega     |  M   | 1Mbyte |
-| キロ kiro     |  K   | 1Kbyte |
+| 接頭語 | 記号 | byte |
+| --- | --- | --- |
+| クエタ quetta | Q | 1Qbyte |
+| ロナ ronna | R | 1Rbyte |
+| ヨタ yotta | Y | 1Ybyte |
+| ゼタ zetta | Z | 1Zbyte |
+| エクサ exa | E | 1Ebyte |
+| ペタ peta | P | 1Pbyte |
+| テラ tera | T | 1Tbyte |
+| ギガ giga | G | 1Gbyte |
+| メガ mega | M | 1Mbyte |
+| キロ kiro | K | 1Kbyte |
 
 ### メモリは並んだ byte
 
