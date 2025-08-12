@@ -5,10 +5,10 @@ author: "sugawa197203"
 draft: false
 ---
 
-* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* [環境構築編](/posts/2024-07-20-UnityLec2024Step0/)
 * 入門編 ← 今ここ
-* [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/)
-* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)
+* [応用編](/posts/2024-08-21-UnityLec2024Step2/)
+* [発展編](/posts/2024-09-11-UnityLec2024Step3/)
 
 # 1. はじめに
 
@@ -1137,7 +1137,7 @@ Unity を使って、ボールを操作してスコアを取るゲームを作�
 
 # MCC Unity講習会
 
-* [環境構築編](https://tuatmcc.com/blog/UnityLec2024Step0/)
+* [環境構築編](/posts/2024-07-20-UnityLec2024Step0/)
 * 入門編 ← 今ここ
-* [応用編](https://tuatmcc.com/blog/UnityLec2024Step2/)
-* [発展編](https://tuatmcc.com/blog/UnityLec2024Step3/)
+* [応用編](/posts/2024-08-21-UnityLec2024Step2/)
+* [発展編](/posts/2024-09-11-UnityLec2024Step3/)

@@ -54,7 +54,7 @@ flag{wow!_data_is_cool}
 
 ## Character Encoding
 
-[アスキーコード表](https://tuatmcc.com/blog/2024-01-26-ascii-table/) を見てエンコードしましょう。
+[アスキーコード表](/posts/2024-01-26-ascii-table/) を見てエンコードしましょう。
 
 <details>
 <summary>Flag</summary>
