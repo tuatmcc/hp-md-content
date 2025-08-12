@@ -3,6 +3,7 @@ title: MCC春合宿2024を実施しました
 date: 2024-03-20
 thumbnail: img.jpg
 img: ./img.jpg
+tags: [news]
 draft: false
 ---
 # MCC春合宿2025を実施しました

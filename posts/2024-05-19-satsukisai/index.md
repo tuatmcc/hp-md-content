@@ -2,6 +2,7 @@
 title: 2024年度皐槻祭にゲームを展示しました！
 date: 2024-05-19
 img: ./img.webp
+tags: [news]
 draft: false
 ---
 # 2024年度皐槻祭にゲームを展示しました！

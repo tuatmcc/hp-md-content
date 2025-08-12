@@ -5,6 +5,7 @@ thumbnail: mccmmancc2021.webp
 description: Learning how to use @nuxt/content to create a blog
 tags:
   - dev
+  - news
 draft: false
 ---
 ## MCCMMANCC2021 を行いました

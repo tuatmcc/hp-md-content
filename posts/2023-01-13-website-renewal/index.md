@@ -9,6 +9,7 @@ tags:
   - dev
   - web
   - nextjs
+  - news
 draft: false
 ---
 MCC のホームページをリニューアルしたのでご報告
