@@ -1,6 +1,6 @@
 ---
 title: "Unity 講習会 2024 応用編"
-date: "2024-08-21"
+date: 2024-08-21
 author: "sugawa197203"
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: CTF Learn Write Up
-date: "2024-04-30"
+date: 2024-04-30
 author: sugawa197203
 draft: false
 ---
