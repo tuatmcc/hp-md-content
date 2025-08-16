@@ -5,6 +5,7 @@ author: ojii3
 tags:
   - web
   - dev
+  - blog
 img: ./markdown.png
 description: Markdown記事をホームページに追加する方法を説明します。
 draft: false

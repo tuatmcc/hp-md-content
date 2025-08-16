@@ -6,6 +6,7 @@ tags:
   - dev
   - nextjs
   - jamstack
+  - blog
 description: GitHubだけでヘッドレスCMS(?)を再現しようとした話。
 draft: false
 ---

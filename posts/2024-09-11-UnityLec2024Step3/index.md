@@ -3,6 +3,7 @@ title: "Unity 講習会 2024 発展編"
 date: 2024-09-11
 author: "sugawa197203"
 draft: false
+tags: [blog]
 ---
 
 * [環境構築編](/posts/2024-07-20-UnityLec2024Step0/)

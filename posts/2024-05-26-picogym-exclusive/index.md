@@ -3,6 +3,7 @@ title: picoGym Exclusive
 date: 2024-05-26
 author: sugawa197203
 draft: false
+tags: [blog]
 ---
 
 # はじめに

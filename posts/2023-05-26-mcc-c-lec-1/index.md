@@ -4,6 +4,7 @@ date: 2023-05-26
 author: sugawa197203
 tags:
   - dev
+  - blog
 description: MCC C言語部内講習会 第１回 を行いました。
 draft: false
 ---

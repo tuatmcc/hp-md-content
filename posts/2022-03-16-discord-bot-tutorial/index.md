@@ -4,6 +4,7 @@ date: 2022-03-16
 author: a4rcvv
 tags:
   - dev
+  - blog
 img: ./discordjs-logo.svg
 description: Discord Bot の開発チュートリアルを行いました。
 draft: false
