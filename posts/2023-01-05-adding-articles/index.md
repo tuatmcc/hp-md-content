@@ -12,54 +12,41 @@ draft: false
 ---
 # 手順
 
-[記事管理用リポジトリ](https://github.com/tuatmcc/hp-md-content) を更新することがメイン工程となります。
+[記事管理用リポジトリ](https://github.com/tuatmcc/hp-md-content) の`main` ブランチにマークダウン記事を追加します。
 
-MCC からのお知らせ記事(活動報告も含む)は、`news`フォルダに、それ以外(技術記事・ポエムなど)は`blog`フォルダにおきます。
+`posts/`直下に `YYYY-MM-DD-<slug>/`というディレクトリを作成し、その中に`index.md`という名前のマークダウンファイルを作成します。
 
-例えば、「ホームページリニューアル」というお知らせ記事を作成する手順は以下のようになります。
 
-1. [記事管理用リポジトリ](https://github.com/tuatmcc/hp-md-content) にアクセスし、`news`フォルダに進みます。
-2. ページ右上の`Creat new file`を押すと、ブラウザ上で簡易エディタが開くので、ファイル名を`homepage-renewal/index.md`などとして下さい。 **スラッシュ/以降は必ず`index.md`です**
-3. マークダウンで記事を書きます。その際の書き方は後ほど述べます。
-4. `main`ブランチに`commit`して保存します。
-5. 次の正午までにホームページに更新が反映されます。
-
-※ 逆に、ファイル名を、`_index.md`などとして保存することで、下書き状態を作れます。
-
-## 注意事項
-
-記事の先頭に以下のような記述が必要です。(Frontmatter)
+マークダウンは以下のような形式で書きます。
 
 ```markdown
-title="blog/bocchi-the-rock/index.md"
 ---
-title: "ぼっち・ざ・ろっくを鑑賞しました"
-img: "./bocchi-the-rock.webp"
-date: "2023-01-03"
-tags: [dev, web, nextjs]
-author: "Goto Hitori"
+title: 記事のタイトル
+date: 2023-01-05
+author: ojii3
+tags: [blog, web, dev]
 ---
+
+# マークダウンの書き方
+
+![alt text](./markdown.png)
 ```
 
-`title`, `date`は必須で、`date`についてはクォートで括ってください。
+前半の `---` で囲まれた部分はメタデータやフロントマターと呼ばれ、記事のタイトルや日付、著者、タグなどを指定します。
+`tuatmcc.com/posts/*` では以下のようにフロントマターを定義しています。
 
-また、画像の URL は、同じフォルダに画像をアップロードし、`./画像のファイル名`とするか、`httpsから始まる外部URL`でお願いします。
-
-なお、ブラウザ上から編集する際は、ドラッグ&ドロップで簡単に画像を置くことができます。
-
-(前者の相対パスの方法を推進)
-
-```markdown
-![alt text](./bocchi.webp)
+```ts
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    author: z.string().optional(),
+    authors: z.string().array().optional(),
+    draft: z.boolean().optional(),
+    tags: z.string().array().optional(),
+  }),
 ```
 
-![alt text](./bocchi.webp)
 
-```markdown
-![logo](https://user-images.githubusercontent.com/84656786/224228583-2f400e96-e64a-4322-9c87-9c0066c43f8f.svg)
-```
-
-![logo](https://user-images.githubusercontent.com/84656786/224228583-2f400e96-e64a-4322-9c87-9c0066c43f8f.svg)
 
 # マークダウンの書き方
 
@@ -235,44 +222,46 @@ _Italic 斜体_
 
 ## コードブロック
 
-タイトル(ファイル名)はあってもなくてもいけます。タイトルのみ書くことはできません。
+タイトルのみ書くことはできません。
 
-```
-`markdown title="markdown"
+````
 ```python title="blog.py"
 print('Hello World')
 ```
-
-```
-undefined
-```
+````
 
 ```python
 title="blog.py"
 print('Hello World')
 ```
 
+````
+```diff lang="python"
+- print("これは削除です")
++ print("これは追加です")
 ```
-`markdown title="markdown"
-```diff
-- これは削除です
-+ これは追加です
+````
+
+```diff lang="python"
+- print("これは削除です")
++ print("これは追加です")
 ```
 
+````
+```python "この単語"
+print(この単語をハイライトできます)
 ```
-undefined
+````
+
+```python "この単語"
+print(この単語をハイライトできます)
 ```
 
-```diff
-- これは削除です
-+ これは追加です
-```
-
-特定の単語や行のハイライトなど、その他の機能は[こちら](https://rehype-pretty-code.netlify.app/)を参照してください。
+特定の単語や行のハイライトなど、その他の機能は[Expressiv Code のドキュメント](https://expressive-code.com/key-features/text-markers/#combining-syntax-highlighting-with-diff-like-syntax)を参照してください。
 
 ## 数式
 
-```math
+```markdown
 $\KaTeX$ を使用しています。
 
 $$
@@ -285,14 +274,6 @@ $\\KaTeX$ を使用しています。
 $$
 L = \\frac{1}{2} \\rho v^2 S C_L
 $$
-
-## Emoji
-
-```markdown
-:smile: :+1: :tada: :rocket: :metal:
-```
-
-:smile: :+1: :tada: :rocket: :metal:
 
 ## 埋め込み
 
