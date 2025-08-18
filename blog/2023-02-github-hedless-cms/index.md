@@ -4,8 +4,7 @@ date: 2023-02-19
 author: ojii3
 tags:
   - dev
-  - nextjs
-  - jamstack
+  - web
 description: GitHubだけでヘッドレスCMS(?)を再現しようとした話。
 draft: false
 ---
