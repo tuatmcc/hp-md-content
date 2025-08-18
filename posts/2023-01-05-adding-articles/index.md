@@ -230,28 +230,33 @@ print('Hello World')
 ```
 ````
 
-```python
-title="blog.py"
-print('Hello World')
-```
-
 ````
 ```diff lang="python"
+print("Hello World")
 - print("これは削除です")
 + print("これは追加です")
 ```
 ````
-
-```diff lang="python"
-- print("これは削除です")
-+ print("これは追加です")
-```
 
 ````
 ```python "この単語"
 print(この単語をハイライトできます)
 ```
 ````
+
+---
+
+```python title="blog.py"
+print('Hello World')
+```
+
+
+```diff lang="python"
+print("Hello World")
+- print("これは削除です")
++ print("これは追加です")
+```
+
 
 ```python "この単語"
 print(この単語をハイライトできます)
