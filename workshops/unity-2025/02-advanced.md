@@ -136,7 +136,7 @@ URLの欄には `com.unity.toonshader` と入力して `Install` ボタンを押
 ## 4.3. ユニティちゃんに Rigidbody と Collidar を取り付ける
 　`Hierarchy` 上の `unitychan` をクリックし、`Inspector` タブから `Add Component` をクリックし、`Rigidbody`と `Box Collidar` を追加します (検索欄に入力すると簡単に見つけられます)。パラメータは以下の画像の通りになるようにしてください (折りたたまれている項目は左側の ▶ をクリックすると表示されます)。
 
-![](./imgs/unitychanInsp.png)
+<!-- ![](./imgs/unitychanInsp.png) -->
 
 また、`Idle Changer (Script)` と `Face Update (Script)` は不要なので、コンポーネント名を右クリック > `Remove Component` をクリックします。
 
