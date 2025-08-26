@@ -584,7 +584,7 @@ namespace DefaultNamespace
 
 これで、ユニティちゃんがブロックを叩くと、ブロックが振動するようになりました。
 
-![](./imgs/breakblock.gif)
+<!-- ![](./imgs/breakblock.gif) -->
 
 # 9. コインを集められるようにする
 
