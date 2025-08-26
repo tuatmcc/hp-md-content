@@ -144,7 +144,7 @@ URLの欄には `com.unity.toonshader` と入力して `Install` ボタンを押
 
 再生ボタン「▶」を押すと、ユニティちゃんが落下していくと思います (落下しないこともあるかも)。
 
-<!-- ![](./imgs/fallin.gif) -->
+![](./imgs/fallin.gif)
 
 初めから落下してはゲームにならないので、ユニティちゃんが落下してしまう場合には `Hierarchy` タブから先ほど作成した `Terrain`を選択し、Inspectorから `Transform` の `Position` を適当な値に設定し、ユニティちゃんの下側に地面が来るようにしてください。
 
@@ -279,7 +279,7 @@ public class MarioController : MonoBehaviour
 
 つぎに、「▶︎ Events」「▶︎ main」の順に押すと、`Move (CallbackContext)`と`Jump (CallbackContext)`があるので、以下のようにして設定します。
 
-<!-- ![](./imgs/unitychanInsp3.gif) -->
+![](./imgs/unitychanInsp3.gif)
 
 再生ボタン「▶」を押して、WASDでキャラクターが動き、スペースキーでキャラクターがジャンプすることを確認してください。ここまでお疲れ様でした！
 
@@ -428,7 +428,7 @@ public class MarioController : MonoBehaviour
 
 あとは、`Project` タブから先ほど作成した `Block` の Prefab をダブルクリックして Prefab を編集できる状態にした上で、以下の通りにしてマテリアルをアタッチします。
 
-<!-- ![](./imgs/hatenaattach.gif) -->
+![](./imgs/hatenaattach.gif)
 
 ## 7.3. ブロックのスクリプトを作成 / アタッチする
 ブロックが叩いたら消えるようにするためのスクリプトを作成します。名前は `BlockHandler.cs` として、内容は以下の通りにしてください。
@@ -493,7 +493,7 @@ namespace DefaultNamespace
 
 これで、ユニティちゃんがブロックの下でジャンプするとブロックが消えるようになります。
 
-<!-- ![](./imgs/breakblock.gif) -->
+![](./imgs/breakblock.gif)
 
 ブロックを選択した状態で Hierarchy 上で `CTRL + C` を押すことでコピーでき、`CTRL + V` でペーストできます。たくさん配置して楽しいステージを作ってみましょう！
 
@@ -584,7 +584,7 @@ namespace DefaultNamespace
 
 これで、ユニティちゃんがブロックを叩くと、ブロックが振動するようになりました。
 
-<!-- ![](./imgs/breakblock.gif) -->
+![](./imgs/breakblock.gif)
 
 # 9. コインを集められるようにする
 
@@ -639,7 +639,7 @@ namespace DefaultNamespace
 
 また、先ほど作成した Hierarchy 上の `Score` を `ScoreManager` 内の `Score Text` にドラッグ&ドロップします。
 
-<!-- ![](./imgs/scoremanager.gif) -->
+![](./imgs/scoremanager.gif)
 
 　次に、`BlockHandler` を編集します。
 
