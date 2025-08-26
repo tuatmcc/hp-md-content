@@ -428,7 +428,7 @@ public class MarioController : MonoBehaviour
 
 あとは、`Project` タブから先ほど作成した `Block` の Prefab をダブルクリックして Prefab を編集できる状態にした上で、以下の通りにしてマテリアルをアタッチします。
 
-![](./imgs/hatenaattach.gif)
+<!-- ![](./imgs/hatenaattach.gif) -->
 
 ## 7.3. ブロックのスクリプトを作成 / アタッチする
 ブロックが叩いたら消えるようにするためのスクリプトを作成します。名前は `BlockHandler.cs` として、内容は以下の通りにしてください。
