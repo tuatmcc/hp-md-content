@@ -76,7 +76,7 @@ Unity のプロジェクトを作ります. 左の `Projects` をクリックし
 
 重なってるタブの切り替えは, タブの右上のタブの名前の部分をクリックすることで切り替えることができます.
 
-![scene-gametab](scene-gametab.gif)
+<!-- ![scene-gametab](scene-gametab.gif) -->
 
 それぞれのタブの詳しい説明は, 実際にゲームを作りながら説明していきます.
 
