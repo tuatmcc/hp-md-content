@@ -639,7 +639,7 @@ namespace DefaultNamespace
 
 また、先ほど作成した Hierarchy 上の `Score` を `ScoreManager` 内の `Score Text` にドラッグ&ドロップします。
 
-![](./imgs/scoremanager.gif)
+<!-- ![](./imgs/scoremanager.gif) -->
 
 　次に、`BlockHandler` を編集します。
 
