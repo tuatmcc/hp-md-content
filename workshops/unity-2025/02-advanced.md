@@ -493,7 +493,7 @@ namespace DefaultNamespace
 
 これで、ユニティちゃんがブロックの下でジャンプするとブロックが消えるようになります。
 
-![](./imgs/breakblock.gif)
+<!-- ![](./imgs/breakblock.gif) -->
 
 ブロックを選択した状態で Hierarchy 上で `CTRL + C` を押すことでコピーでき、`CTRL + V` でペーストできます。たくさん配置して楽しいステージを作ってみましょう！
 
