@@ -144,7 +144,7 @@ URLの欄には `com.unity.toonshader` と入力して `Install` ボタンを押
 
 再生ボタン「▶」を押すと、ユニティちゃんが落下していくと思います (落下しないこともあるかも)。
 
-![](./imgs/fallin.gif)
+<!-- ![](./imgs/fallin.gif) -->
 
 初めから落下してはゲームにならないので、ユニティちゃんが落下してしまう場合には `Hierarchy` タブから先ほど作成した `Terrain`を選択し、Inspectorから `Transform` の `Position` を適当な値に設定し、ユニティちゃんの下側に地面が来るようにしてください。
 
