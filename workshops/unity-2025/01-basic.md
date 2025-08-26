@@ -88,7 +88,7 @@ Unity のプロジェクトを作ります. 左の `Projects` をクリックし
 
 `SampleScene` となってる名前を `MainScene` に変更しましょう. `Project` タブの `Assets` から `Scenes` フォルダを開き, `SampleScene` を右クリックして, `Rename` を選択します. そして, `MainScene` と入力してください.
 
-![remenesamplescene](./renamesamplescene.gif)
+<!-- ![remenesamplescene](./renamesamplescene.gif) -->
 
 これで, `Hierarchy` タブにあるシーンの名前が `MainScene` に変更されました.
 
