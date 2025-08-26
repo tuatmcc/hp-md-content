@@ -279,7 +279,7 @@ public class MarioController : MonoBehaviour
 
 つぎに、「▶︎ Events」「▶︎ main」の順に押すと、`Move (CallbackContext)`と`Jump (CallbackContext)`があるので、以下のようにして設定します。
 
-![](./imgs/unitychanInsp3.gif)
+<!-- ![](./imgs/unitychanInsp3.gif) -->
 
 再生ボタン「▶」を押して、WASDでキャラクターが動き、スペースキーでキャラクターがジャンプすることを確認してください。ここまでお疲れ様でした！
 
