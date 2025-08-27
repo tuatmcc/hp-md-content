@@ -466,7 +466,7 @@ Prefab はゲームオブジェクトの設計図なので, Prefabで設定し�
 
 `Project` タブで `Assets` フォルダー上で右クリック → `Create` → `MonoBehaviour Script`を選択して `CameraController` という名前のスクリプトを作成して, 以下のように書き換えてください.
 
-```diff lang="" title="CameraController.cs" showLineNumbers
+```diff lang="csharp" title="CameraController.cs" showLineNumbers
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
