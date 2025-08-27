@@ -1133,9 +1133,9 @@ Project で右クリック → `Create` → `Material` を選択
 
 以下のテクスチャをボールに貼り付けてみようと思います.
 
-![balltexture](./BallTexture.png)
+![balltexture](./BallTexturePreview.png)
 
-[ここをクリックでダウンロード](./01-basic/BallTexture.png)
+[ここをクリックでダウンロード](./BallTexture.png)
 
 ダウンロードしたら, `Assets` にドラッグアンドドロップしてください.
 
