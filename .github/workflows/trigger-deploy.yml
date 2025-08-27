@@ -1,0 +1,28 @@
+---
+name: Trigger tuatmcc.com deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+permissions: {}
+
+jobs:
+  trigger-remote-deploy:
+    name: Dispatch deploy.yml in tuatmcc/tuatmcc.com
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch tuatmcc.com build workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: tuatmcc
+          REPO: tuatmcc.com
+          WF: deploy.yml
+          REF: main
+        run: |
+          gh api \
+            repos/${OWNER}/${REPO}/actions/workflows/${WF}/dispatches \
+            -X POST \
+            -f ref="${REF}" \
+            -f inputs='{"from_repo":"${{ github.repository }}","from_sha":"${{ github.sha }}"}'
