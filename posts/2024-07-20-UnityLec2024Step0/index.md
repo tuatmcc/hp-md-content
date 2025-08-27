@@ -7,9 +7,9 @@ tags: [blog]
 ---
 
 * 環境構築編 ← 今ここ
-* [入門編](/posts/2024-07-20-UnityLec2024Step1/)
-* [応用編](/posts/2024-08-21-UnityLec2024Step2/)
-* [発展編](/posts/2024-09-11-UnityLec2024Step3/)
+* [入門編](/posts/2024-07-20-unitylec2024step1/)
+* [応用編](/posts/2024-08-21-unitylec2024step2/)
+* [発展編](/posts/2024-09-11-unitylec2024step3/)
 
 # Unity 講習会 環境構築編
 
@@ -48,6 +48,6 @@ Visual Studio がインストールされたらマイクロソフトアカウン
 # MCC Unity講習会
 
 * 環境構築編 ← 今ここ
-* [入門編](/posts/2024-07-20-UnityLec2024Step1/)
-* [応用編](/posts/2024-08-21-UnityLec2024Step2/)
-* [発展編](/posts/2024-09-11-UnityLec2024Step3/)
+* [入門編](/posts/2024-07-20-unitylec2024step1/)
+* [応用編](/posts/2024-08-21-unitylec2024step2/)
+* [発展編](/posts/2024-09-11-unitylec2024step3/)
