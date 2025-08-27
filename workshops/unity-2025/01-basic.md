@@ -1135,7 +1135,7 @@ Project で右クリック → `Create` → `Material` を選択
 
 ![balltexture](./BallTexture.png)
 
-[ここをクリックでダウンロード](./BallTexture.png)
+[ここをクリックでダウンロード](./01-basic/BallTexture.png)
 
 ダウンロードしたら, `Assets` にドラッグアンドドロップしてください.
 
