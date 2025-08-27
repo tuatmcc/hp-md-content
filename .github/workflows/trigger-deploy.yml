@@ -22,7 +22,8 @@ jobs:
           REF: main
         run: |
           gh api \
-            repos/${OWNER}/${REPO}/actions/workflows/${WF}/dispatches \
-            -X POST \
-            -f ref="${REF}" \
-            -f inputs='{"from_repo":"${{ github.repository }}","from_sha":"${{ github.sha }}"}'
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /repos/${OWNER}/${REPO}/actions/workflows/${WF}/dispatches \
+             -f ${REF}
