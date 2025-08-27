@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Dispatch tuatmcc.com build workflow
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           OWNER: tuatmcc
           REPO: tuatmcc.com
           WF: deploy.yml
