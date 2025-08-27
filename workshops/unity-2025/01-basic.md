@@ -1133,9 +1133,9 @@ Project で右クリック → `Create` → `Material` を選択
 
 以下のテクスチャをボールに貼り付けてみようと思います.
 
-![balltexture](./BallTexturePreview.png)
+![balltexture](./BallTexture.png)
 
-[ここをクリックでダウンロード](./BallTexture.png)
+[ここをクリックでダウンロード](https://github.com/tuatmcc/hp-md-content/blob/main/workshops/unity-2025/BallTexture.png)
 
 ダウンロードしたら, `Assets` にドラッグアンドドロップしてください.
 
