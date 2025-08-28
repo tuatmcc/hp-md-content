@@ -418,6 +418,9 @@ public class MarioController : MonoBehaviour
 
 ![](./Unity_Assets/hatena.png)
 
+[ダウンロードリンク](https://github.com/tuatmcc/hp-md-content/blob/main/workshops/unity-2025/Unity_Assets/hatena.png)
+
+
 ダウンロードしたら、この画像をUnityにインポートします。`Materials` フォルダ内で右クリック > `Import New Assets...` から、ダウンロードした画像を選択してください。
 
 次に、Projectタブから先ほど作成した `Hatena` マテリアルを選択 > Inspectorタブの `Surface Inputs` > `Base Map` の左側にある「◉」をクリックして、先ほどインポートした画像を選択します。
