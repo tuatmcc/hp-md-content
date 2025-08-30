@@ -17,3 +17,17 @@ Next.js に Velite.js や next-mdx-remote 等を組み合わせてブログを�
 
 
 Cloudflare Pages から Cloudflare Workers へ移行する際、依存を一通りアップデートしたところ以下の Issue と同様のエラーに遭遇しました。
+
+https://github.com/vercel/next.js/issues/58171
+
+このエラー、静的生成のときだけ起こるようで、例えば OpenNext 等を使うと起こりません。
+(注: Cloudflare で Next.js を使用する場合、基本的には静的生成するかOpenNextを使うかの2択です)
+
+というわけで、最近 Astro を気に入っていたのもあり、Next.js をやめました。
+
+## 移行の方針について
+
+最低限の目標は以下の通りでした。
+
+- 中身がほぼ同じな `blog`, `news` を `posts` に統合し、タグで管理する。
+
