@@ -1,6 +1,6 @@
 ---
 title: MCC でチーム開発するための Git 入門
-date: 2025-09-
+date: 2025-10-01
 authors: [sugawa197203]
 firstSlug: chapter1
 ---
