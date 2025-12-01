@@ -4,6 +4,7 @@ date: 2025-12-01
 author: mcc
 description: MCC アドベントカレンダーまとめ
 draft: false
+tags: [blog]
 ---
 
 # MCC アドベントカレンダーまとめ
