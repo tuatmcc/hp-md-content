@@ -1,7 +1,7 @@
 ---
 title: MCC アドベントカレンダーまとめ
 date: 2025-12-01
-author: mcc
+author: tuatmcc-public
 description: MCC アドベントカレンダーまとめ
 draft: false
 tags: [blog]
