@@ -1,5 +1,5 @@
 ---
-title: 【GIF付き】写経で学ぶ Unity - 玉転がしゲームを作ろう (2026年版)
+title: 【GIF付き】写経で学ぶ Unity - 玉転がしゲームを作ろう 
 date: 2026-05-27
 author: Inoyu
 ---
