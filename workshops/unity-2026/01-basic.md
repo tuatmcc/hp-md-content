@@ -1,7 +1,7 @@
 ---
 title: 【GIF付き】写経で学ぶ Unity - 玉転がしゲームを作ろう (2026年版)
 date: 2026-05-27
-author: sugawa197203(refined by Inoyu)
+author: Inoyu
 ---
 
 難易度: ★☆☆☆☆ 入門レベル
